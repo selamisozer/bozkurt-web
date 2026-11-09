@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medya | BOZKURT — Alternatif 2</title>
+  <meta name="description" content="BOZKURT Endüstri basın bültenleri, basın iletişimi, medya kiti ve kurumsal künye." />
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/favicon.png" />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="stylesheet" href="assets/css/site.css" />
+</head>
+
+<body class="bg-white text-charcoal font-body">
+
+  <!-- ============ ÜST BİLGİ ÇUBUĞU ============ -->
+  <div class="bg-navy-deep text-white/70 text-[11px] tracking-[0.14em] uppercase">
+    <div class="container-page flex h-9 items-center justify-between">
+      <span class="hidden sm:inline">BOZKURT Endüstri</span>
+      <div class="flex items-center gap-5">
+        <a href="tel:+902328685600" class="transition-colors hover:text-white">+90 232 868 56 00</a>
+        <span class="hidden text-white/25 md:inline">|</span>
+        <a href="mailto:info@bozkurt.com.tr" class="hidden transition-colors hover:text-white md:inline">info@bozkurt.com.tr</a>
+        <span class="text-white/25">|</span>
+        <div class="flex items-center gap-2">
+          <span class="text-white">TR</span>
+          <a href="#" class="transition-colors hover:text-white" hreflang="en">EN</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header id="siteHeader" class="sticky top-0 z-50 border-b border-steel-pale bg-white/95 backdrop-blur-md transition-shadow duration-300">
+    <div class="container-page flex h-[76px] items-center justify-between gap-6 lg:h-[88px]">
+
+      <a href="index-2.html" class="logo-mark shrink-0" aria-label="BOZKURT ana sayfa">
+        <img src="assets/logos/bozkurt.png" alt="BOZKURT" class="logo-mark-img h-7 w-auto lg:h-8" />
+        <span class="logo-shine" aria-hidden="true"></span>
+        <span class="logo-rule" aria-hidden="true"></span>
+      </a>
+
+      <nav class="hidden items-center gap-4 lg:flex xl:gap-8" aria-label="Ana menü">
+        <a href="index-2.html" class="nav-item">Ana Sayfa</a>
+                <div class="nav-drop">
+          <button type="button" id="markalarBtn" class="nav-item nav-drop-trigger" aria-expanded="false" aria-controls="markalarMenu">
+            Markalarımız
+            <svg class="nav-drop-chev h-2.5 w-2.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="square" d="m6 9.5 6 6 6-6" />
+            </svg>
+          </button>
+
+          <div id="markalarMenu" class="nav-drop-panel">
+            <div class="nav-drop-card">
+              <div class="grid gap-px bg-steel-pale sm:grid-cols-2">
+
+                <a href="markalar-2.html#betonstar" class="nav-brand">
+                  <span class="nav-brand-media">
+                    <img src="assets/img/betonstar-hero.jpg" alt="" aria-hidden="true" />
+                    <span class="absolute inset-0 bg-gradient-to-t from-navy-deep/85 via-navy-deep/25 to-transparent"></span>
+                    <img src="assets/logos/betonstar-white.png" alt="Betonstar" class="absolute bottom-3 left-3 h-4 w-auto" />
+                  </span>
+                  <span class="nav-brand-body">
+                    <span class="nav-brand-kicker">01 · Beton Teknolojileri</span>
+                    <span class="nav-brand-name">Beton pompaları</span>
+                    <span class="nav-brand-desc">Bomlu, mikserli ve sabit pompa çözümleri.</span>
+                    <span class="nav-brand-more">
+                      Markayı incele
+                      <svg class="h-2.5 w-2.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 12h15m0 0-5.5-5.5M19 12l-5.5 5.5" />
+                      </svg>
+                    </span>
+                  </span>
+                </a>
+
+                <a href="markalar-2.html#fermec" class="nav-brand">
+                  <span class="nav-brand-media">
+                    <img src="assets/img/fermec-machine.jpg" alt="" aria-hidden="true" />
+                    <span class="absolute inset-0 bg-gradient-to-t from-ink/85 via-navy-ink/25 to-transparent"></span>
+                    <img src="assets/logos/fermec-white.png" alt="Fermec" class="absolute bottom-3 left-3 h-4 w-auto" />
+                  </span>
+                  <span class="nav-brand-body">
+                    <span class="nav-brand-kicker">02 · İş Makineleri</span>
+                    <span class="nav-brand-name">Kazıcı-yükleyiciler</span>
+                    <span class="nav-brand-desc">Tek makinede kazı, yükleme ve tesviye.</span>
+                    <span class="nav-brand-more">
+                      Markayı incele
+                      <svg class="h-2.5 w-2.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 12h15m0 0-5.5-5.5M19 12l-5.5 5.5" />
+                      </svg>
+                    </span>
+                  </span>
+                </a>
+              </div>
+
+              <a href="markalar-2.html" class="nav-drop-all">
+                Tüm markaları gör
+                <svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 12h15m0 0-5.5-5.5M19 12l-5.5 5.5" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <a href="kurumsal-2.html" class="nav-item">Kurumsal</a>
+        <a href="medya-2.html" class="nav-item is-current" aria-current="page">Medya</a>
+        <a href="kariyer-2.html" class="nav-item">Kariyer</a>
+        <a href="iletisim-2.html" class="nav-item">İletişim</a>
+        <a href="#form" class="ml-2 bg-navy px-6 py-3 text-[11px] font-bold uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:bg-navy-dark">
+          Teklif Alın
+        </a>
+      </nav>
+
+      <button id="menuBtn" class="-mr-2 p-2 text-charcoal lg:hidden" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mobileMenu">
+        <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="square" d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17" />
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="hidden border-t border-steel-pale bg-white lg:hidden">
+      <nav class="container-page flex flex-col py-3" aria-label="Mobil menü">
+        <a href="index-2.html" class="nav-item-mobile">Ana Sayfa</a>
+                <div class="border-b border-steel-pale py-1">
+          <a href="markalar-2.html" class="nav-item-mobile border-0">Markalarımız</a>
+          <div class="grid grid-cols-2 gap-3 pb-4">
+            <a href="markalar-2.html#betonstar" class="nav-brand-mobile">
+              <span class="nav-brand-mobile-media">
+                <img src="assets/img/betonstar-hero.jpg" alt="" aria-hidden="true" />
+                <span class="absolute inset-0 bg-gradient-to-t from-navy-deep/85 to-transparent"></span>
+                <img src="assets/logos/betonstar-white.png" alt="Betonstar" class="absolute bottom-2 left-2 h-3 w-auto" />
+              </span>
+              <span class="mt-2 block text-[10px] uppercase tracking-[0.14em] text-charcoal/60">Beton pompaları</span>
+            </a>
+            <a href="markalar-2.html#fermec" class="nav-brand-mobile">
+              <span class="nav-brand-mobile-media">
+                <img src="assets/img/fermec-machine.jpg" alt="" aria-hidden="true" />
+                <span class="absolute inset-0 bg-gradient-to-t from-ink/85 to-transparent"></span>
+                <img src="assets/logos/fermec-white.png" alt="Fermec" class="absolute bottom-2 left-2 h-3 w-auto" />
+              </span>
+              <span class="mt-2 block text-[10px] uppercase tracking-[0.14em] text-charcoal/60">İş makineleri</span>
+            </a>
+          </div>
+        </div>
+        <a href="kurumsal-2.html" class="nav-item-mobile">Kurumsal</a>
+        <a href="medya-2.html" class="nav-item-mobile is-current">Medya</a>
+        <a href="kariyer-2.html" class="nav-item-mobile border-0">Kariyer</a>
+        <a href="iletisim-2.html" class="nav-item-mobile border-0">İletişim</a>
+        <a href="#form" class="mt-3 bg-navy px-6 py-4 text-center text-[11px] font-bold uppercase tracking-[0.18em] text-white">Teklif Alın</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ SAYFA BAŞLIĞI ============ -->
+    <section class="relative isolate overflow-hidden bg-navy-deep">
+      <div class="absolute inset-0 hazard-stripes opacity-[0.05]"></div>
+      <div class="container-page relative py-14 lg:py-20">
+        <nav aria-label="Sayfa yolu" class="flex items-center gap-2.5 text-[10px] uppercase tracking-[0.18em] text-white/40">
+          <a href="index-2.html" class="transition-colors hover:text-white">Ana Sayfa</a>
+          <span aria-hidden="true">/</span>
+          <span class="text-white/80">Medya</span>
+        </nav>
+
+        <h1 class="mt-7 font-display text-4xl font-bold leading-[1.05] tracking-[-0.03em] text-white sm:text-5xl lg:text-[56px]">
+          Medya
+        </h1>
+        <p class="mt-5 max-w-2xl text-[14.5px] leading-relaxed text-white/60">
+          Basın bültenleri, kurumsal bilgiler ve medya kiti. Röportaj, görsel
+          talebi ve bilgi doğrulama için basın iletişim ekibimize ulaşabilirsiniz.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ BÜLTENLER + BASIN İLETİŞİMİ ============ -->
+    <section class="py-16 lg:py-24">
+      <div class="container-page grid gap-14 lg:grid-cols-12 lg:gap-16">
+
+        <div class="lg:col-span-8">
+          <div class="flex items-center gap-4">
+            <span class="h-[2px] w-10 bg-navy"></span>
+            <span class="label-eyebrow text-navy">Basın Bültenleri</span>
+          </div>
+
+          <div class="mt-8 border-t border-steel-pale">
+            <details class="fold" open>
+              <summary>
+                <span class="fold-plus" aria-hidden="true"></span>
+                <span class="min-w-0 flex-1">
+                  <span class="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[10px] uppercase tracking-[0.16em] text-steel">
+                    <span>12 Mart 2025</span>
+                    <span class="h-1 w-1 rounded-full bg-steel-light" aria-hidden="true"></span>
+                    <span class="text-navy">Kurumsal</span>
+                  </span>
+                  <span class="fold-title mt-2 block">Betonstar, BOZKURT Endüstri bünyesine katıldı</span>
+                </span>
+              </summary>
+              <div class="fold-body">
+                <p class="max-w-2xl text-[13.5px] leading-[1.8] text-charcoal/65">
+                  2008'den bu yana İzmir Torbalı'da beton pompası üreten Betonstar,
+                  BOZKURT Endüstri bünyesine katıldı. Katılımla birlikte marka; ürün
+                  geliştirme, kurumsal kimlik ve satış organizasyonunda kapsamlı bir
+                  dönüşüm sürecine girdi.
+                </p>
+                <p class="mt-3 max-w-2xl text-[13.5px] leading-[1.8] text-charcoal/65">
+                  BOZKURT Endüstri, yatırımın ardından Torbalı'daki entegre üretim
+                  kampüsünde kapasite ve Ar-Ge altyapısını güçlendirme kararı aldı.
+                </p>
+              </div>
+            </details>
+
+            <details class="fold">
+              <summary>
+                <span class="fold-plus" aria-hidden="true"></span>
+                <span class="min-w-0 flex-1">
+                  <span class="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[10px] uppercase tracking-[0.16em] text-steel">
+                    <span>2025</span>
+                    <span class="h-1 w-1 rounded-full bg-steel-light" aria-hidden="true"></span>
+                    <span class="text-navy">Marka</span>
+                  </span>
+                  <span class="fold-title mt-2 block">Fermec ile iş makineleri alanına giriş</span>
+                </span>
+              </summary>
+              <div class="fold-body">
+                <p class="max-w-2xl text-[13.5px] leading-[1.8] text-charcoal/65">
+                  Kazıcı-yükleyici segmentindeki Fermec markasının gruba katılmasıyla
+                  ürün gamı beton teknolojilerinden iş makinelerine genişledi.
+                  Fermec, İzmir Serbest Bölgesi'nde (İZBAŞ) ihracat odaklı üretim
+                  yapıyor.
+                </p>
+                <p class="mt-3 max-w-2xl text-[13.5px] leading-[1.8] text-charcoal/65">
+                  İki marka; ortak kalite standardı, servis ağı ve satın alma
+                  altyapısını paylaşmaya başladı.
+                </p>
+              </div>
+            </details>
+
+            <details class="fold">
+              <summary>
+                <span class="fold-plus" aria-hidden="true"></span>
+                <span class="min-w-0 flex-1">
+                  <span class="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[10px] uppercase tracking-[0.16em] text-steel">
+                    <span>2025</span>
+                    <span class="h-1 w-1 rounded-full bg-steel-light" aria-hidden="true"></span>
+                    <span class="text-navy">Üretim</span>
+                  </span>
+                  <span class="fold-title mt-2 block">70.000 m² entegre üretim kampüsü</span>
+                </span>
+              </summary>
+              <div class="fold-body">
+                <p class="max-w-2xl text-[13.5px] leading-[1.8] text-charcoal/65">
+                  Torbalı'daki kampüs; metal işleme, hidrolik montaj, boya ve test
+                  hatlarını tek çatı altında topluyor. Üretim planlaması, sahadan
+                  gelen servis kayıtlarıyla birlikte yürütülüyor.
+                </p>
+              </div>
+            </details>
+
+            <details class="fold">
+              <summary>
+                <span class="fold-plus" aria-hidden="true"></span>
+                <span class="min-w-0 flex-1">
+                  <span class="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[10px] uppercase tracking-[0.16em] text-steel">
+                    <span>2025</span>
+                    <span class="h-1 w-1 rounded-full bg-steel-light" aria-hidden="true"></span>
+                    <span class="text-navy">İhracat</span>
+                  </span>
+                  <span class="fold-title mt-2 block">Satış ağı 50'den fazla ülkeye ulaştı</span>
+                </span>
+              </summary>
+              <div class="fold-body">
+                <p class="max-w-2xl text-[13.5px] leading-[1.8] text-charcoal/65">
+                  Betonstar ve Fermec ürünleri; Avrupa, Orta Doğu, Kuzey Afrika ve
+                  Orta Asya pazarlarında bayilik yapısıyla satılıyor. İhracat
+                  operasyonu, yedek parça ve saha servisiyle birlikte yönetiliyor.
+                </p>
+              </div>
+            </details>
+          </div>
+
+          <p class="mt-6 text-[11px] leading-relaxed text-steel">
+            Bültenlerde yer alan bilgiler yayın tarihindeki durumu yansıtır.
+            Güncel veriler için basın iletişim ekibiyle teyit almanızı öneririz.
+          </p>
+        </div>
+
+        <aside class="lg:col-span-4">
+          <div class="border border-steel-pale bg-steel-pale/40 p-6 lg:sticky lg:top-32">
+            <span class="label-eyebrow text-steel">Basın İletişimi</span>
+            <p class="mt-4 text-[13px] leading-relaxed text-charcoal/65">
+              Röportaj talepleri, görsel materyal ve bilgi doğrulama için
+              aşağıdaki kanalları kullanabilirsiniz.
+            </p>
+
+            <div class="mt-6 space-y-4 border-t border-steel-light/60 pt-6 text-[13px]">
+              <div>
+                <div class="text-[10px] font-semibold uppercase tracking-[0.16em] text-steel">E-Posta</div>
+                <a href="mailto:basin@bozkurt.com.tr" class="mt-1.5 block font-medium text-charcoal transition-colors hover:text-navy">basin@bozkurt.com.tr</a>
+              </div>
+              <div>
+                <div class="text-[10px] font-semibold uppercase tracking-[0.16em] text-steel">Telefon</div>
+                <a href="tel:+902328685600" class="mt-1.5 block font-medium text-charcoal transition-colors hover:text-navy">+90 232 868 56 00</a>
+              </div>
+              <div>
+                <div class="text-[10px] font-semibold uppercase tracking-[0.16em] text-steel">Adres</div>
+                <p class="mt-1.5 leading-relaxed text-charcoal/70">
+                  Subaşı Mah. Osman Dirik Cad.<br />No: 111/2 · Torbalı / İzmir
+                </p>
+              </div>
+            </div>
+
+            <a href="#medya-kiti" class="group mt-7 inline-flex w-full items-center justify-between gap-3 bg-navy px-6 py-4 text-[11px] font-bold uppercase tracking-[0.18em] text-white transition-colors hover:bg-navy-dark">
+              Medya Kitine Git
+              <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="square" d="M4 12h15m0 0-5.5-5.5M19 12l-5.5 5.5" /></svg>
+            </a>
+
+            <p class="mt-4 text-[11px] leading-relaxed text-steel">
+              Talebiniz en geç iki iş günü içinde yanıtlanır.
+            </p>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- ============ MEDYA KİTİ ============ -->
+    <section id="medya-kiti" class="scroll-mt-24 border-t border-steel-pale bg-steel-pale/50 py-16 lg:py-20">
+      <div class="container-page">
+        <div class="reveal flex flex-col justify-between gap-6 border-b border-steel-light/60 pb-8 lg:flex-row lg:items-end">
+          <div>
+            <div class="flex items-center gap-4">
+              <span class="h-[2px] w-10 bg-navy"></span>
+              <span class="label-eyebrow text-navy">Medya Kiti</span>
+            </div>
+            <h2 class="mt-4 font-display text-[26px] font-bold leading-tight tracking-[-0.02em] text-charcoal sm:text-[32px]">
+              Logo, renk ve künye
+            </h2>
+          </div>
+          <p class="max-w-sm text-[12.5px] leading-relaxed text-charcoal/60">
+            Logoları PNG olarak indirebilirsiniz. Kullanımda logoyu oranını
+            bozmadan, çevresinde yeterli boşluk bırakarak yerleştirin.
+          </p>
+        </div>
+
+        <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <a href="assets/logos/bozkurt.png" download class="kit-tile group">
+            <span class="kit-preview"><img src="assets/logos/bozkurt.png" alt="BOZKURT logosu" loading="lazy" /></span>
+            <span class="flex items-center justify-between gap-3">
+              <span>
+                <span class="block text-[11px] font-bold uppercase tracking-[0.16em] text-charcoal">BOZKURT</span>
+                <span class="mt-1 block text-[10.5px] uppercase tracking-[0.12em] text-steel">Açık zemin · PNG</span>
+              </span>
+              <span class="text-navy transition-transform duration-300 group-hover:translate-y-0.5"><svg class="h-3 w-3 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg></span>
+            </span>
+          </a>
+
+          <a href="assets/logos/bozkurt-white.png" download class="kit-tile group">
+            <span class="kit-preview kit-preview--ink"><img src="assets/logos/bozkurt-white.png" alt="BOZKURT beyaz logo" loading="lazy" /></span>
+            <span class="flex items-center justify-between gap-3">
+              <span>
+                <span class="block text-[11px] font-bold uppercase tracking-[0.16em] text-charcoal">BOZKURT</span>
+                <span class="mt-1 block text-[10.5px] uppercase tracking-[0.12em] text-steel">Koyu zemin · PNG</span>
+              </span>
+              <span class="text-navy transition-transform duration-300 group-hover:translate-y-0.5"><svg class="h-3 w-3 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg></span>
+            </span>
+          </a>
+
+          <a href="assets/logos/betonstar.png" download class="kit-tile group">
+            <span class="kit-preview"><img src="assets/logos/betonstar.png" alt="Betonstar logosu" loading="lazy" /></span>
+            <span class="flex items-center justify-between gap-3">
+              <span>
+                <span class="block text-[11px] font-bold uppercase tracking-[0.16em] text-charcoal">Betonstar</span>
+                <span class="mt-1 block text-[10.5px] uppercase tracking-[0.12em] text-steel">Açık zemin · PNG</span>
+              </span>
+              <span class="text-navy transition-transform duration-300 group-hover:translate-y-0.5"><svg class="h-3 w-3 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg></span>
+            </span>
+          </a>
+
+          <a href="assets/logos/betonstar-white.png" download class="kit-tile group">
+            <span class="kit-preview kit-preview--ink"><img src="assets/logos/betonstar-white.png" alt="Betonstar beyaz logo" loading="lazy" /></span>
+            <span class="flex items-center justify-between gap-3">
+              <span>
+                <span class="block text-[11px] font-bold uppercase tracking-[0.16em] text-charcoal">Betonstar</span>
+                <span class="mt-1 block text-[10.5px] uppercase tracking-[0.12em] text-steel">Koyu zemin · PNG</span>
+              </span>
+              <span class="text-navy transition-transform duration-300 group-hover:translate-y-0.5"><svg class="h-3 w-3 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg></span>
+            </span>
+          </a>
+
+          <a href="assets/logos/fermec.png" download class="kit-tile group">
+            <span class="kit-preview"><img src="assets/logos/fermec.png" alt="Fermec logosu" loading="lazy" /></span>
+            <span class="flex items-center justify-between gap-3">
+              <span>
+                <span class="block text-[11px] font-bold uppercase tracking-[0.16em] text-charcoal">Fermec</span>
+                <span class="mt-1 block text-[10.5px] uppercase tracking-[0.12em] text-steel">Açık zemin · PNG</span>
+              </span>
+              <span class="text-navy transition-transform duration-300 group-hover:translate-y-0.5"><svg class="h-3 w-3 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg></span>
+            </span>
+          </a>
+
+          <a href="assets/logos/fermec-white.png" download class="kit-tile group">
+            <span class="kit-preview kit-preview--ink"><img src="assets/logos/fermec-white.png" alt="Fermec beyaz logo" loading="lazy" /></span>
+            <span class="flex items-center justify-between gap-3">
+              <span>
+                <span class="block text-[11px] font-bold uppercase tracking-[0.16em] text-charcoal">Fermec</span>
+                <span class="mt-1 block text-[10.5px] uppercase tracking-[0.12em] text-steel">Koyu zemin · PNG</span>
+              </span>
+              <span class="text-navy transition-transform duration-300 group-hover:translate-y-0.5"><svg class="h-3 w-3 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg></span>
+            </span>
+          </a>
+        </div>
+
+        <div class="mt-12 grid gap-10 lg:grid-cols-12">
+          <div class="lg:col-span-5">
+            <span class="label-eyebrow text-steel">Kurumsal Renkler</span>
+            <div class="mt-5 grid grid-cols-2 gap-px bg-steel-light/60 sm:grid-cols-4 lg:grid-cols-2">
+              <div class="bg-white p-4">
+                <div class="h-12 w-full bg-navy"></div>
+                <div class="mt-3 flex items-baseline justify-between gap-2">
+                  <span class="text-[10.5px] font-semibold uppercase tracking-[0.14em] text-charcoal/70">Lacivert</span>
+                  <span class="text-[10px] uppercase tracking-[0.1em] text-steel">#1F3F7F</span>
+                </div>
+              </div>
+              <div class="bg-white p-4">
+                <div class="h-12 w-full bg-navy-ink"></div>
+                <div class="mt-3 flex items-baseline justify-between gap-2">
+                  <span class="text-[10.5px] font-semibold uppercase tracking-[0.14em] text-charcoal/70">Derin Lacivert</span>
+                  <span class="text-[10px] uppercase tracking-[0.1em] text-steel">#0A1526</span>
+                </div>
+              </div>
+              <div class="bg-white p-4">
+                <div class="h-12 w-full bg-steel"></div>
+                <div class="mt-3 flex items-baseline justify-between gap-2">
+                  <span class="text-[10.5px] font-semibold uppercase tracking-[0.14em] text-charcoal/70">Çelik Grisi</span>
+                  <span class="text-[10px] uppercase tracking-[0.1em] text-steel">#959AA1</span>
+                </div>
+              </div>
+              <div class="bg-white p-4">
+                <div class="h-12 w-full bg-steel-pale"></div>
+                <div class="mt-3 flex items-baseline justify-between gap-2">
+                  <span class="text-[10.5px] font-semibold uppercase tracking-[0.14em] text-charcoal/70">Açık Gri</span>
+                  <span class="text-[10px] uppercase tracking-[0.1em] text-steel">#EEF0F4</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7">
+            <span class="label-eyebrow text-steel">Kurumsal Künye</span>
+            <dl class="mt-5 divide-y divide-steel-pale border-y border-steel-pale text-[13px]">
+              <div class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 py-3.5">
+                <dt class="text-steel">Ticari unvan</dt>
+                <dd class="font-medium text-charcoal">BOZKURT Endüstri</dd>
+              </div>
+              <div class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 py-3.5">
+                <dt class="text-steel">Merkez ve üretim</dt>
+                <dd class="font-medium text-charcoal">Torbalı / İzmir, Türkiye</dd>
+              </div>
+              <div class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 py-3.5">
+                <dt class="text-steel">Markalar</dt>
+                <dd class="font-medium text-charcoal">Betonstar · Fermec</dd>
+              </div>
+              <div class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 py-3.5">
+                <dt class="text-steel">Üretim alanı</dt>
+                <dd class="font-medium text-charcoal">70.000 m²</dd>
+              </div>
+              <div class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 py-3.5">
+                <dt class="text-steel">İhracat</dt>
+                <dd class="font-medium text-charcoal">50+ ülke</dd>
+              </div>
+              <div class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 py-3.5">
+                <dt class="text-steel">Web</dt>
+                <dd class="font-medium text-charcoal">bozkurt.com.tr</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="py-14 lg:py-16">
+      <div class="container-page flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
+        <div>
+          <h2 class="font-display text-2xl font-bold tracking-[-0.02em] text-charcoal sm:text-3xl">
+            Bültenlerimizi e-posta ile alın.
+          </h2>
+          <p class="mt-2 max-w-xl text-sm leading-relaxed text-charcoal/60">
+            Yeni ürün, yatırım ve kurumsal duyuruları basın listemize kaydolarak
+            takip edebilirsiniz.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <a href="mailto:basin@bozkurt.com.tr?subject=Bas%C4%B1n%20listesine%20kay%C4%B1t" class="group inline-flex items-center gap-3 bg-navy px-7 py-4 text-[11px] font-bold uppercase tracking-[0.18em] text-white transition-colors hover:bg-navy-dark">
+            Basın Listesine Katıl
+            <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="square" d="M4 12h15m0 0-5.5-5.5M19 12l-5.5 5.5" /></svg>
+          </a>
+          <a href="iletisim-2.html" class="inline-flex items-center gap-3 border border-charcoal/20 px-7 py-4 text-[11px] font-bold uppercase tracking-[0.18em] text-charcoal transition-colors hover:border-navy hover:text-navy">
+            İletişim
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-navy-ink text-white/60">
+    <div class="container-page py-14">
+      <div class="grid gap-12 lg:grid-cols-12">
+        <div class="lg:col-span-4">
+          <img src="assets/logos/bozkurt-white.png" alt="BOZKURT" class="h-7 w-auto" />
+          <p class="mt-5 max-w-xs text-[13px] leading-relaxed text-white/50">
+            Beton teknolojileri ve iş makineleri alanında iki global marka,
+            tek mühendislik kültürü.
+          </p>
+          <div class="mt-7 flex items-center gap-5">
+            <a href="https://www.betonstar.com/" target="_blank" rel="noopener noreferrer" aria-label="Betonstar">
+              <img src="assets/logos/betonstar-white.png" alt="Betonstar" class="h-5 w-auto opacity-60 transition-opacity hover:opacity-100" />
+            </a>
+            <a href="https://www.fermec.com.tr/" target="_blank" rel="noopener noreferrer" aria-label="Fermec">
+              <img src="assets/logos/fermec-white.png" alt="Fermec" class="h-5 w-auto opacity-60 transition-opacity hover:opacity-100" />
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-3">
+          <h3 class="text-[11px] font-bold uppercase tracking-[0.18em] text-white">Kurumsal</h3>
+          <ul class="mt-5 space-y-3 text-[13px]">
+            <li><a href="kurumsal-2.html" class="transition-colors hover:text-white">Hakkımızda</a></li>
+            <li><a href="markalar-2.html" class="transition-colors hover:text-white">Markalarımız</a></li>
+            <li><a href="kurumsal-2.html#uretim" class="transition-colors hover:text-white">Üretim</a></li>
+            <li><a href="medya-2.html" class="transition-colors hover:text-white">Medya</a></li>
+            <li><a href="kariyer-2.html" class="transition-colors hover:text-white">Kariyer</a></li>
+            <li><a href="iletisim-2.html" class="transition-colors hover:text-white">İletişim</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-3">
+          <h3 class="text-[11px] font-bold uppercase tracking-[0.18em] text-white">Marka Siteleri</h3>
+          <ul class="mt-5 space-y-3 text-[13px]">
+            <li><a href="https://www.betonstar.com/" target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-white">betonstar.com ↗</a></li>
+            <li><a href="https://www.fermec.com.tr/" target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-white">fermec.com.tr ↗</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-2">
+          <h3 class="text-[11px] font-bold uppercase tracking-[0.18em] text-white">Merkez</h3>
+          <p class="mt-5 text-[13px] leading-relaxed">
+            Subaşı Mah. Osman Dirik Cad.<br />No: 111/2<br />Torbalı / İzmir
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-12 flex flex-col gap-4 border-t border-white/10 pt-7 text-[11px] uppercase tracking-[0.14em] sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; 2026 BOZKURT Endüstri. Tüm hakları saklıdır.</p>
+        <div class="flex gap-6">
+          <a href="#" class="transition-colors hover:text-white">KVKK</a>
+          <a href="#" class="transition-colors hover:text-white">Çerez Politikası</a>
+          <a href="#" class="transition-colors hover:text-white">Bilgi Toplumu Hizmetleri</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn?.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      menuBtn.setAttribute('aria-expanded', String(!isOpen));
+    });
+
+    mobileMenu?.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    /* Açılır menüler (Markalarımız + Kurumsal) */
+    document.querySelectorAll('.nav-drop').forEach((drop) => {
+      const dropBtn = drop.querySelector('.nav-drop-trigger');
+      if (!dropBtn) return;
+
+      const setDrop = (open) => {
+        if (open) drop.setAttribute('data-open', '');
+        else drop.removeAttribute('data-open');
+        dropBtn.setAttribute('aria-expanded', String(open));
+      };
+
+      dropBtn.addEventListener('click', () => {
+        const willOpen = !drop.hasAttribute('data-open');
+        // Aynı anda tek menü açık kalsın
+        document.querySelectorAll('.nav-drop[data-open]').forEach((other) => {
+          if (other !== drop) {
+            other.removeAttribute('data-open');
+            other.querySelector('.nav-drop-trigger')?.setAttribute('aria-expanded', 'false');
+          }
+        });
+        setDrop(willOpen);
+      });
+
+      document.addEventListener('click', (event) => {
+        if (!drop.contains(event.target)) setDrop(false);
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && drop.hasAttribute('data-open')) {
+          setDrop(false);
+          dropBtn.focus();
+        }
+      });
+
+      drop.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => setDrop(false));
+      });
+    });
+
+    const header = document.getElementById('siteHeader');
+    const onScroll = () => header.classList.toggle('shadow-sm', window.scrollY > 8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    // Scroll-reveal: .reveal öğeleri görünüm alanına girince açılır
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const reveals = document.querySelectorAll('.reveal');
+
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+      reveals.forEach((el) => el.classList.add('is-visible'));
+    } else {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+      reveals.forEach((el) => observer.observe(el));
+    }
+  </script>
+</body>
+</html>
