@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kariyer | BOZKURT</title>
+  <meta name="description" content="BOZKURT Endüstri açık pozisyonları, staj programı ve başvuru süreci. Betonstar ve Fermec markalarıyla üretim, Ar-Ge ve satış sonrası ekipleri." />
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/favicon.png" />
+  <link rel="stylesheet" href="assets/css/site.css" />
+</head>
+
+<body class="bg-white text-charcoal font-body">
+
+  <!-- ============ ÜST BİLGİ ÇUBUĞU ============ -->
+  <div class="bg-navy-deep text-white/70 text-[11px] tracking-[0.14em] uppercase">
+    <div class="container-page flex h-9 items-center justify-between">
+      <span class="hidden sm:inline">BOZKURT Endüstri</span>
+      <div class="flex items-center gap-5">
+        <a href="tel:+902328685600" class="transition-colors hover:text-white">+90 232 868 56 00</a>
+        <span class="hidden text-white/25 md:inline">|</span>
+        <a href="mailto:info@bozkurt.com.tr" class="hidden transition-colors hover:text-white md:inline">info@bozkurt.com.tr</a>
+        <span class="text-white/25">|</span>
+        <div class="flex items-center gap-2">
+          <span class="text-white">TR</span>
+          <a href="#" class="transition-colors hover:text-white" hreflang="en">EN</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header id="siteHeader" class="sticky top-0 z-50 border-b border-steel-pale bg-white/95 backdrop-blur-md transition-shadow duration-300">
+    <div class="container-page flex h-[76px] items-center justify-between gap-6 lg:h-[88px]">
+
+      <a href="index.html" class="logo-mark shrink-0" aria-label="BOZKURT ana sayfa">
+        <img src="assets/logos/bozkurt.png" alt="BOZKURT" class="logo-mark-img h-7 w-auto lg:h-8" />
+        <span class="logo-shine" aria-hidden="true"></span>
+        <span class="logo-rule" aria-hidden="true"></span>
+      </a>
+
+      <nav class="hidden items-center gap-9 lg:flex" aria-label="Ana menü">
+        <a href="index.html" class="nav-item">Ana Sayfa</a>
+                <div class="nav-drop">
+          <button type="button" id="markalarBtn" class="nav-item nav-drop-trigger" aria-expanded="false" aria-controls="markalarMenu">
+            Markalarımız
+            <svg class="nav-drop-chev h-2.5 w-2.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="square" d="m6 9.5 6 6 6-6" />
+            </svg>
+          </button>
+
+          <div id="markalarMenu" class="nav-drop-panel">
+            <div class="nav-drop-card">
+              <div class="grid gap-px bg-steel-pale sm:grid-cols-2">
+
+                <a href="markalar.html#betonstar" class="nav-brand">
+                  <span class="nav-brand-media">
+                    <img src="assets/img/betonstar-hero.jpg" alt="" aria-hidden="true" />
+                    <span class="absolute inset-0 bg-gradient-to-t from-navy-deep/85 via-navy-deep/25 to-transparent"></span>
+                    <img src="assets/logos/betonstar-white.png" alt="Betonstar" class="absolute bottom-3 left-3 h-4 w-auto" />
+                  </span>
+                  <span class="nav-brand-body">
+                    <span class="nav-brand-kicker">01 · Beton Teknolojileri</span>
+                    <span class="nav-brand-name">Beton pompaları</span>
+                    <span class="nav-brand-desc">Bomlu, mikserli ve sabit pompa çözümleri.</span>
+                    <span class="nav-brand-more">
+                      Markayı incele
+                      <svg class="h-2.5 w-2.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 12h15m0 0-5.5-5.5M19 12l-5.5 5.5" />
+                      </svg>
+                    </span>
+                  </span>
+                </a>
+
+                <a href="markalar.html#fermec" class="nav-brand">
+                  <span class="nav-brand-media">
+                    <img src="assets/img/fermec-machine.jpg" alt="" aria-hidden="true" />
+                    <span class="absolute inset-0 bg-gradient-to-t from-ink/85 via-navy-ink/25 to-transparent"></span>
+                    <img src="assets/logos/fermec-white.png" alt="Fermec" class="absolute bottom-3 left-3 h-4 w-auto" />
+                  </span>
+                  <span class="nav-brand-body">
+                    <span class="nav-brand-kicker">02 · İş Makineleri</span>
+                    <span class="nav-brand-name">Kazıcı-yükleyiciler</span>
+                    <span class="nav-brand-desc">Tek makinede kazı, yükleme ve tesviye.</span>
+                    <span class="nav-brand-more">
+                      Markayı incele
+                      <svg class="h-2.5 w-2.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 12h15m0 0-5.5-5.5M19 12l-5.5 5.5" />
+                      </svg>
+                    </span>
+                  </span>
+                </a>
+              </div>
+
+              <a href="markalar.html" class="nav-drop-all">
+                Tüm markaları gör
+                <svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 12h15m0 0-5.5-5.5M19 12l-5.5 5.5" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-drop nav-drop--list">
+          <button type="button" id="kurumsalBtn" class="nav-item nav-drop-trigger is-current" aria-expanded="false" aria-controls="kurumsalMenu">
+            Kurumsal
+            <svg class="nav-drop-chev h-2.5 w-2.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="square" d="m6 9.5 6 6 6-6" />
+            </svg>
+          </button>
+
+          <div id="kurumsalMenu" class="nav-drop-panel">
+            <div class="nav-drop-card">
+              <a href="kurumsal.html" class="nav-list-link">
+                <span class="nav-list-name">Kurumsal Yapı<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg></span>
+                <span class="nav-list-desc">Hakkımızda, üretim ve kalite</span>
+              </a>
+              <a href="medya.html" class="nav-list-link">
+                <span class="nav-list-name">Medya<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg></span>
+                <span class="nav-list-desc">Basın bültenleri ve basın kiti</span>
+              </a>
+              <a href="kariyer.html" class="nav-list-link" aria-current="page">
+                <span class="nav-list-name">Kariyer<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg></span>
+                <span class="nav-list-desc">Açık pozisyonlar ve başvuru</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <a href="iletisim.html" class="nav-item is-current" aria-current="page">İletişim</a>
+        <a href="#form" class="ml-2 bg-navy px-6 py-3 text-[11px] font-bold uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:bg-navy-dark">
+          Teklif Alın
+        </a>
+      </nav>
+
+      <button id="menuBtn" class="-mr-2 p-2 text-charcoal lg:hidden" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mobileMenu">
+        <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="square" d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17" />
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="hidden border-t border-steel-pale bg-white lg:hidden">
+      <nav class="container-page flex flex-col py-3" aria-label="Mobil menü">
+        <a href="index.html" class="nav-item-mobile">Ana Sayfa</a>
+                <div class="border-b border-steel-pale py-1">
+          <a href="markalar.html" class="nav-item-mobile border-0">Markalarımız</a>
+          <div class="grid grid-cols-2 gap-3 pb-4">
+            <a href="markalar.html#betonstar" class="nav-brand-mobile">
+              <span class="nav-brand-mobile-media">
+                <img src="assets/img/betonstar-hero.jpg" alt="" aria-hidden="true" />
+                <span class="absolute inset-0 bg-gradient-to-t from-navy-deep/85 to-transparent"></span>
+                <img src="assets/logos/betonstar-white.png" alt="Betonstar" class="absolute bottom-2 left-2 h-3 w-auto" />
+              </span>
+              <span class="mt-2 block text-[10px] uppercase tracking-[0.14em] text-charcoal/60">Beton pompaları</span>
+            </a>
+            <a href="markalar.html#fermec" class="nav-brand-mobile">
+              <span class="nav-brand-mobile-media">
+                <img src="assets/img/fermec-machine.jpg" alt="" aria-hidden="true" />
+                <span class="absolute inset-0 bg-gradient-to-t from-ink/85 to-transparent"></span>
+                <img src="assets/logos/fermec-white.png" alt="Fermec" class="absolute bottom-2 left-2 h-3 w-auto" />
+              </span>
+              <span class="mt-2 block text-[10px] uppercase tracking-[0.14em] text-charcoal/60">İş makineleri</span>
+            </a>
+          </div>
+        </div>
+        <a href="kurumsal.html" class="nav-item-mobile">Kurumsal</a>
+        <a href="medya.html" class="nav-item-mobile nav-item-mobile--sub">Medya</a>
+        <a href="kariyer.html" class="nav-item-mobile nav-item-mobile--sub is-current border-0">Kariyer</a>
+        <a href="iletisim.html" class="nav-item-mobile border-0 is-current">İletişim</a>
+        <a href="#form" class="mt-3 bg-navy px-6 py-4 text-center text-[11px] font-bold uppercase tracking-[0.18em] text-white">Teklif Alın</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ SAYFA BAŞLIĞI ============ -->
+    <section class="relative isolate overflow-hidden bg-navy-deep">
+      <div class="absolute inset-0 hazard-stripes opacity-[0.05]"></div>
+      <div class="container-page relative py-14 lg:py-20">
+        <nav aria-label="Sayfa yolu" class="flex items-center gap-2.5 text-[10px] uppercase tracking-[0.18em] text-white/40">
+          <a href="index.html" class="transition-colors hover:text-white">Ana Sayfa</a>
+          <span aria-hidden="true">/</span>
+          <span class="text-white/80">Kariyer</span>
+        </nav>
+
+        <h1 class="mt-7 font-display text-4xl font-bold leading-[1.05] tracking-[-0.03em] text-white sm:text-5xl lg:text-[56px]">
+          Kariyer
+        </h1>
+        <p class="mt-5 max-w-2xl text-[14.5px] leading-relaxed text-white/60">
+          Sahada karşılığı olan mühendislik. Betonstar ve Fermec markalarıyla
+          ürettiğimiz makinelerin arkasında, üretimi ve sahayı birlikte düşünen
+          bir ekip var.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ NEDEN BOZKURT ============ -->
+    <section class="py-16 lg:py-24">
+      <div class="container-page">
+        <div class="reveal grid gap-10 lg:grid-cols-12 lg:gap-16">
+          <div class="lg:col-span-5">
+            <div class="flex items-center gap-4">
+              <span class="h-[2px] w-10 bg-navy"></span>
+              <span class="label-eyebrow text-navy">Neden BOZKURT</span>
+            </div>
+            <h2 class="mt-5 font-display text-[28px] font-bold leading-[1.14] tracking-[-0.02em] text-charcoal sm:text-[34px]">
+              Tasarım masası ile<br />şantiye arasındaki mesafe kısa.
+            </h2>
+            <p class="mt-5 max-w-md text-[13.5px] leading-[1.8] text-charcoal/60">
+              Makinenin nasıl çalıştığını yalnızca çizimden değil, sahada
+              öğreniyoruz. Servis kayıtları bir sonraki üretimin girdisi;
+              müşteri geri bildirimi tasarım kararı oluyor.
+            </p>
+          </div>
+
+          <div class="grid gap-px bg-steel-light/60 sm:grid-cols-2 lg:col-span-7">
+            <div class="bg-white p-6">
+              <div class="font-display text-[11px] font-bold tracking-[0.2em] text-navy">01</div>
+              <h3 class="mt-3 font-display text-base font-bold text-charcoal">Sahada karşılığı olan iş</h3>
+              <p class="mt-2 text-[12.5px] leading-[1.75] text-charcoal/60">
+                Her proje, gerçek şantiye koşullarında yük testine tabi tutulur.
+                Yaptığınız işin sonucunu makinenin çalışmasında görürsünüz.
+              </p>
+            </div>
+            <div class="bg-white p-6">
+              <div class="font-display text-[11px] font-bold tracking-[0.2em] text-navy">02</div>
+              <h3 class="mt-3 font-display text-base font-bold text-charcoal">İki marka, ortak altyapı</h3>
+              <p class="mt-2 text-[12.5px] leading-[1.75] text-charcoal/60">
+                Beton teknolojileri ve iş makineleri aynı üretim ve kalite
+                kültürünü paylaşır; farklı disiplinler bir arada çalışır.
+              </p>
+            </div>
+            <div class="bg-white p-6">
+              <div class="font-display text-[11px] font-bold tracking-[0.2em] text-navy">03</div>
+              <h3 class="mt-3 font-display text-base font-bold text-charcoal">İhracat ölçeğinde deneyim</h3>
+              <p class="mt-2 text-[12.5px] leading-[1.75] text-charcoal/60">
+                50'den fazla ülkeye satış; farklı pazarların teknik beklentilerini
+                doğrudan görme imkânı.
+              </p>
+            </div>
+            <div class="bg-white p-6">
+              <div class="font-display text-[11px] font-bold tracking-[0.2em] text-navy">04</div>
+              <h3 class="mt-3 font-display text-base font-bold text-charcoal">Ar-Ge merkezi</h3>
+              <p class="mt-2 text-[12.5px] leading-[1.75] text-charcoal/60">
+                Tescilli Ar-Ge Tasarım Merkezi çalışmaları; hidrolik, elektronik
+                ve yapısal tasarım ekiplerinin ortak projeleri.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ AÇIK POZİSYONLAR ============ -->
+    <section id="pozisyonlar" class="scroll-mt-24 border-y border-steel-pale bg-steel-pale/50 py-16 lg:py-20">
+      <div class="container-page">
+        <div class="flex flex-col justify-between gap-6 border-b border-steel-light/60 pb-8 lg:flex-row lg:items-end">
+          <div>
+            <div class="flex items-center gap-4">
+              <span class="h-[2px] w-10 bg-navy"></span>
+              <span class="label-eyebrow text-navy">Açık Pozisyonlar</span>
+            </div>
+            <h2 class="mt-4 font-display text-[26px] font-bold leading-tight tracking-[-0.02em] text-charcoal sm:text-[32px]">
+              6 açık pozisyon
+            </h2>
+          </div>
+          <p class="max-w-sm text-[12.5px] leading-relaxed text-charcoal/60">
+            İlgilendiğiniz pozisyonun detayını açıp başvuru bağlantısını
+            kullanabilirsiniz. Genel başvuru her zaman açıktır.
+          </p>
+        </div>
+
+        <div class="mt-8 border-t border-steel-pale">
+          <details class="fold">
+            <summary>
+              <span class="fold-plus" aria-hidden="true"></span>
+              <span class="min-w-0 flex-1">
+                <span class="fold-title block">Beton Pompası Ar-Ge Mühendisi</span>
+                <span class="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[10px] uppercase tracking-[0.16em] text-steel">
+                  <span class="text-navy">Ar-Ge</span>
+                  <span class="h-1 w-1 rounded-full bg-steel-light" aria-hidden="true"></span>
+                  <span>Torbalı / İzmir</span>
+                  <span class="h-1 w-1 rounded-full bg-steel-light" aria-hidden="true"></span>
+                  <span>Tam zamanlı</span>
+                </span>
+              </span>
+            </summary>
+            <div class="fold-body">
+              <p class="max-w-2xl text-[13.5px] leading-[1.8] text-charcoal/65">
+                Bomlu beton pompalarının hidrolik ve yapısal tasarımında görev alacak;
+                sahadan gelen servis verilerini tasarım kararına dönüştürecek
+                mühendis arıyoruz.
+              </p>
+              <ul class="mt-4 grid max-w-2xl gap-2 text-[12.5px] leading-relaxed text-charcoal/65 sm:grid-cols-2">
+                <li class="flex gap-2.5"><span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-navy"></span>Makine / mekatronik mühendisliği mezunu</li>
+                <li class="flex gap-2.5"><span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-navy"></span>Hidrolik sistemlerde en az 3 yıl deneyim</li>
+                <li class="flex gap-2.5"><span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-navy"></span>3D CAD (SolidWorks / Inventor) yetkinliği</li>
+                <li class="flex gap-2.5"><span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-navy"></span>Saha ziyaretlerine açık, seyahat engeli olmaması</li>
+              </ul>
+              <a href="mailto:kariyer@bozkurt.com.tr?subject=Beton%20Pompas%C4%B1%20Ar-Ge%20M%C3%BChendisi%20ba%C5%9Fvurusu" class="group mt-6 inline-flex items-center gap-3 bg-navy px-6 py-3.5 text-[11px] font-bold uppercase tracking-[0.18em] text-white transition-colors hover:bg-navy-dark">
+                Bu Pozisyona Başvur
+                <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="square" d="M4 12h15m0 0-5.5-5.5M19 12l-5.5 5.5" /></svg>
+              </a>
+            </div>
+          </details>
+
+          <details class="fold">
+            <summary>
+              <span class="fold-plus" aria-hidden="true"></span>
+              <span class="min-w-0 flex-1">
+                <span class="fold-title block">Kalite Kontrol Mühendisi</span>
+                <span class="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[10px] uppercase tracking-[0.16em] text-steel">
+                  <span class="text-navy">Kalite</span>
+                  <span class="h-1 w-1 rounded-full bg-steel-light" aria-hidden="true"></span>
+                  <span>Torbalı / İzmir</span>
+                  <span class="h-1 w-1 rounded-full bg-steel-light" aria-hidden="true"></span>
+                  <span>Tam zamanlı</span>
+                </span>
+              </span>
+            </summary>
+            <div class="fold-body">
+              <p class="max-w-2xl text-[13.5px] leading-[1.8] text-charcoal/65">
+                Üretim hatlarında giriş kalite kontrolü, son kontrol ve uygunsuzluk
+                yönetimi süreçlerini yürütecek; ISO 9001 ve CE gerekliliklerinin
+                sahada karşılığını takip edecek mühendis.
+              </p>
+              <ul class="mt-4 grid max-w-2xl gap-2 text-[12.5px] leading-relaxed text-charcoal/65 sm:grid-cols-2">
+                <li class="flex gap-2.5"><span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-navy"></span>Makine / endüstri mühendisliği mezunu</li>
+                <li class="flex gap-2.5"><span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-navy"></span>Kalite yönetim sistemleri deneyimi</li>
+                <li class="flex gap-2.5"><span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-navy"></span>Ölçüm ve muayene yöntemlerine hâkimiyet</li>
+                <li class="flex gap-2.5"><span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-navy"></span>Raporlama ve kök neden analizi</li>
+              </ul>
+              <a href="mailto:kariyer@bozkurt.com.tr?subject=Kalite%20Kontrol%20M%C3%BChendisi%20ba%C5%9Fvurusu" class="group mt-6 inline-flex items-center gap-3 bg-navy px-6 py-3.5 text-[11px] font-bold uppercase tracking-[0.18em] text-white transition-colors hover:bg-navy-dark">
+                Bu Pozisyona Başvur
+                <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="square" d="M4 12h15m0 0-5.5-5.5M19 12l-5.5 5.5" /></svg>
+              </a>
+            </div>
+          </details>
+
+          <details class="fold">
+            <summary>
+              <span class="fold-plus" aria-hidden="true"></span>
+              <span class="min-w-0 flex-1">
+                <span class="fold-title block">Üretim Planlama Uzmanı</span>
+                <span class="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[10px] uppercase tracking-[0.16em] text-steel">
+                  <span class="text-navy">Üretim</span>
+                  <span class="h-1 w-1 rounded-full bg-steel-light" aria-hidden="true"></span>
+                  <span>Torbalı / İzmir</span>
+                  <span class="h-1 w-1 rounded-full bg-steel-light" aria-hidden="true"></span>
+                  <span>Tam zamanlı</span>
+                </span>
+              </span>
+            </summary>
+            <div class="fold-body">
+              <p class="max-w-2xl text-[13.5px] leading-[1.8] text-charcoal/65">
+                İki markanın üretim programını tek kampüste planlayacak; malzeme,
+                işgücü ve teslim tarihlerini dengeleyecek uzman arıyoruz.
+              </p>
+              <ul class="mt-4 grid max-w-2xl gap-2 text-[12.5px] leading-relaxed text-charcoal/65 sm:grid-cols-2">
+                <li class="flex gap-2.5"><span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-navy"></span>Endüstri mühendisliği mezunu</li>
+                <li class="flex gap-2.5"><span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-navy"></span>MRP / ERP kullanım deneyimi</li>
+                <li class="flex gap-2.5"><span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-navy"></span>Çok ürünlü üretim planlama bilgisi</li>
+                <li class="flex gap-2.5"><span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-navy"></span>İleri Excel ve raporlama</li>
+              </ul>
+              <a href="mailto:kariyer@bozkurt.com.tr?subject=%C3%9Cretim%20Planlama%20Uzman%C4%B1%20ba%C5%9Fvurusu" class="group mt-6 inline-flex items-center gap-3 bg-navy px-6 py-3.5 text-[11px] font-bold uppercase tracking-[0.18em] text-white transition-colors hover:bg-navy-dark">
+                Bu Pozisyona Başvur
+                <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="square" d="M4 12h15m0 0-5.5-5.5M19 12l-5.5 5.5" /></svg>
+              </a>
+            </div>
+          </details>
+
+          <details class="fold">
+            <summary>
+              <span class="fold-plus" aria-hidden="true"></span>
+              <span class="min-w-0 flex-1">
+                <span class="fold-title block">İhracat Operasyon Uzmanı</span>
+                <span class="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[10px] uppercase tracking-[0.16em] text-steel">
+                  <span class="text-navy">Dış Ticaret</span>
+                  <span class="h-1 w-1 rounded-full bg-steel-light" aria-hidden="true"></span>
+                  <span>Torbalı / İzmir</span>
+                  <span class="h-1 w-1 rounded-full bg-steel-light" aria-hidden="true"></span>
+                  <span>Tam zamanlı</span>
+                </span>
+              </span>
+            </summary>
+            <div class="fold-body">
+              <p class="max-w-2xl text-[13.5px] leading-[1.8] text-charcoal/65">
+                50'den fazla ülkeye yapılan sevkiyatlarda sipariş, dokümantasyon ve
+                lojistik süreçlerini yürütecek; bayi ve distribütörlerle
+                operasyonel iletişimi kuracak uzman.
+              </p>
+              <ul class="mt-4 grid max-w-2xl gap-2 text-[12.5px] leading-relaxed text-charcoal/65 sm:grid-cols-2">
+                <li class="flex gap-2.5"><span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-navy"></span>Dış ticaret / işletme mezunu</li>
+                <li class="flex gap-2.5"><span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-navy"></span>İhracat dokümantasyonu deneyimi</li>
+                <li class="flex gap-2.5"><span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-navy"></span>İngilizce (yazılı ve sözlü)</li>
+                <li class="flex gap-2.5"><span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-navy"></span>İkinci yabancı dil tercih sebebi</li>
+              </ul>
+              <a href="mailto:kariyer@bozkurt.com.tr?subject=%C4%B0hracat%20Operasyon%20Uzman%C4%B1%20ba%C5%9Fvurusu" class="group mt-6 inline-flex items-center gap-3 bg-navy px-6 py-3.5 text-[11px] font-bold uppercase tracking-[0.18em] text-white transition-colors hover:bg-navy-dark">
+                Bu Pozisyona Başvur
+                <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="square" d="M4 12h15m0 0-5.5-5.5M19 12l-5.5 5.5" /></svg>
+              </a>
+            </div>
+          </details>
+
+          <details class="fold">
+            <summary>
+              <span class="fold-plus" aria-hidden="true"></span>
+              <span class="min-w-0 flex-1">
+                <span class="fold-title block">Saha Servis Teknisyeni</span>
+                <span class="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[10px] uppercase tracking-[0.16em] text-steel">
+                  <span class="text-navy">Satış Sonrası</span>
+                  <span class="h-1 w-1 rounded-full bg-steel-light" aria-hidden="true"></span>
+                  <span>Türkiye geneli</span>
+                  <span class="h-1 w-1 rounded-full bg-steel-light" aria-hidden="true"></span>
+                  <span>Tam zamanlı</span>
+                </span>
+              </span>
+            </summary>
+            <div class="fold-body">
+              <p class="max-w-2xl text-[13.5px] leading-[1.8] text-charcoal/65">
+                Beton pompası ve kazıcı-yükleyici makinelerde periyodik bakım,
+                arıza tespiti ve devreye alma işlerini yürütecek teknisyen.
+              </p>
+              <ul class="mt-4 grid max-w-2xl gap-2 text-[12.5px] leading-relaxed text-charcoal/65 sm:grid-cols-2">
+                <li class="flex gap-2.5"><span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-navy"></span>Makine / otomotiv teknik lise veya ön lisans</li>
+                <li class="flex gap-2.5"><span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-navy"></span>Hidrolik ve elektrik arıza tespiti</li>
+                <li class="flex gap-2.5"><span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-navy"></span>B sınıfı ehliyet, seyahat engeli olmaması</li>
+                <li class="flex gap-2.5"><span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-navy"></span>Saha deneyimi tercih sebebi</li>
+              </ul>
+              <a href="mailto:kariyer@bozkurt.com.tr?subject=Saha%20Servis%20Teknisyeni%20ba%C5%9Fvurusu" class="group mt-6 inline-flex items-center gap-3 bg-navy px-6 py-3.5 text-[11px] font-bold uppercase tracking-[0.18em] text-white transition-colors hover:bg-navy-dark">
+                Bu Pozisyona Başvur
+                <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="square" d="M4 12h15m0 0-5.5-5.5M19 12l-5.5 5.5" /></svg>
+              </a>
+            </div>
+          </details>
+
+          <details class="fold">
+            <summary>
+              <span class="fold-plus" aria-hidden="true"></span>
+              <span class="min-w-0 flex-1">
+                <span class="fold-title block">Uzun Dönem Stajyer — Ar-Ge / Üretim</span>
+                <span class="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[10px] uppercase tracking-[0.16em] text-steel">
+                  <span class="text-navy">Staj</span>
+                  <span class="h-1 w-1 rounded-full bg-steel-light" aria-hidden="true"></span>
+                  <span>Torbalı / İzmir</span>
+                  <span class="h-1 w-1 rounded-full bg-steel-light" aria-hidden="true"></span>
+                  <span>Dönemlik</span>
+                </span>
+              </span>
+            </summary>
+            <div class="fold-body">
+              <p class="max-w-2xl text-[13.5px] leading-[1.8] text-charcoal/65">
+                Mühendislik öğrencileri için uzun dönem staj programı. Stajyerler
+                gerçek bir proje üzerinde çalışır; tasarım, üretim veya kalite
+                ekiplerinden biriyle eşleştirilir.
+              </p>
+              <ul class="mt-4 grid max-w-2xl gap-2 text-[12.5px] leading-relaxed text-charcoal/65 sm:grid-cols-2">
+                <li class="flex gap-2.5"><span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-navy"></span>3. veya 4. sınıf mühendislik öğrencisi</li>
+                <li class="flex gap-2.5"><span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-navy"></span>Haftada en az 3 gün devam</li>
+                <li class="flex gap-2.5"><span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-navy"></span>CAD ve raporlama becerisi</li>
+                <li class="flex gap-2.5"><span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-navy"></span>Uzun dönem (6 ay ve üzeri) tercih</li>
+              </ul>
+              <a href="mailto:kariyer@bozkurt.com.tr?subject=Uzun%20D%C3%B6nem%20Staj%20Ba%C5%9Fvurusu" class="group mt-6 inline-flex items-center gap-3 bg-navy px-6 py-3.5 text-[11px] font-bold uppercase tracking-[0.18em] text-white transition-colors hover:bg-navy-dark">
+                Staj Başvurusu Yap
+                <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="square" d="M4 12h15m0 0-5.5-5.5M19 12l-5.5 5.5" /></svg>
+              </a>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BAŞVURU SÜRECİ ============ -->
+    <section class="py-16 lg:py-20">
+      <div class="container-page grid gap-12 lg:grid-cols-12 lg:gap-16">
+        <div class="lg:col-span-4">
+          <span class="label-eyebrow text-steel">Başvuru Süreci</span>
+          <h2 class="mt-4 font-display text-[26px] font-bold leading-tight tracking-[-0.02em] text-charcoal sm:text-[32px]">
+            Dört adımda<br />değerlendirme
+          </h2>
+          <p class="mt-4 max-w-xs text-[13px] leading-[1.8] text-charcoal/60">
+            Her başvuru, pozisyonun teknik gerekliliklerine göre okunur.
+            Süreç boyunca size geri bildirim verilir.
+          </p>
+        </div>
+
+        <ol class="grid gap-px bg-steel-light/60 sm:grid-cols-2 lg:col-span-8">
+          <li class="bg-white p-6">
+            <div class="font-display text-[11px] font-bold tracking-[0.2em] text-navy">01</div>
+            <h3 class="mt-3 font-display text-[15px] font-bold text-charcoal">Başvuru</h3>
+            <p class="mt-2 text-[12.5px] leading-[1.75] text-charcoal/60">
+              Özgeçmişinizi pozisyon adıyla birlikte kariyer e-postamıza gönderin.
+            </p>
+          </li>
+          <li class="bg-white p-6">
+            <div class="font-display text-[11px] font-bold tracking-[0.2em] text-navy">02</div>
+            <h3 class="mt-3 font-display text-[15px] font-bold text-charcoal">Ön değerlendirme</h3>
+            <p class="mt-2 text-[12.5px] leading-[1.75] text-charcoal/60">
+              Deneyim ve teknik uygunluk incelenir; uygun adaylarla görüşme planlanır.
+            </p>
+          </li>
+          <li class="bg-white p-6">
+            <div class="font-display text-[11px] font-bold tracking-[0.2em] text-navy">03</div>
+            <h3 class="mt-3 font-display text-[15px] font-bold text-charcoal">Teknik görüşme</h3>
+            <p class="mt-2 text-[12.5px] leading-[1.75] text-charcoal/60">
+              İlgili ekip yöneticisiyle teknik görüşme; gerekirse saha veya üretim turu.
+            </p>
+          </li>
+          <li class="bg-white p-6">
+            <div class="font-display text-[11px] font-bold tracking-[0.2em] text-navy">04</div>
+            <h3 class="mt-3 font-display text-[15px] font-bold text-charcoal">Teklif</h3>
+            <p class="mt-2 text-[12.5px] leading-[1.75] text-charcoal/60">
+              Değerlendirme sonucunda teklif iletilir; başlangıç tarihi birlikte belirlenir.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ GENEL BAŞVURU / CTA ============ -->
+    <section class="relative isolate overflow-hidden bg-navy-deep py-14 text-white lg:py-16">
+      <div class="absolute inset-0 hazard-stripes opacity-[0.05]"></div>
+      <div class="container-page relative flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
+        <div>
+          <span class="label-eyebrow text-steel-light">Genel Başvuru</span>
+          <h2 class="mt-4 font-display text-2xl font-bold tracking-[-0.02em] sm:text-3xl">
+            Size uygun bir pozisyon yok mu?
+          </h2>
+          <p class="mt-2 max-w-xl text-sm leading-relaxed text-white/60">
+            Özgeçmişinizi gönderin. Üretim, Ar-Ge, kalite ve satış sonrası
+            ekiplerinde yeni bir pozisyon açıldığında değerlendirilirsiniz.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <a href="mailto:kariyer@bozkurt.com.tr?subject=Genel%20Ba%C5%9Fvuru" class="group inline-flex items-center gap-3 bg-white px-7 py-4 text-[11px] font-bold uppercase tracking-[0.18em] text-navy transition-colors hover:bg-steel-pale">
+            Genel Başvuru Yap
+            <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="square" d="M4 12h15m0 0-5.5-5.5M19 12l-5.5 5.5" /></svg>
+          </a>
+          <a href="iletisim.html" class="inline-flex items-center gap-3 border border-white/30 px-7 py-4 text-[11px] font-bold uppercase tracking-[0.18em] transition-colors hover:border-white hover:bg-white hover:text-navy">
+            İletişim
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-navy-ink text-white/60">
+    <div class="container-page py-14">
+      <div class="grid gap-12 lg:grid-cols-12">
+        <div class="lg:col-span-4">
+          <img src="assets/logos/bozkurt-white.png" alt="BOZKURT" class="h-7 w-auto" />
+          <p class="mt-5 max-w-xs text-[13px] leading-relaxed text-white/50">
+            Beton teknolojileri ve iş makineleri alanında iki global marka,
+            tek mühendislik kültürü.
+          </p>
+          <div class="mt-7 flex items-center gap-5">
+            <a href="https://www.betonstar.com/" target="_blank" rel="noopener noreferrer" aria-label="Betonstar">
+              <img src="assets/logos/betonstar-white.png" alt="Betonstar" class="h-5 w-auto opacity-60 transition-opacity hover:opacity-100" />
+            </a>
+            <a href="https://www.fermec.com.tr/" target="_blank" rel="noopener noreferrer" aria-label="Fermec">
+              <img src="assets/logos/fermec-white.png" alt="Fermec" class="h-5 w-auto opacity-60 transition-opacity hover:opacity-100" />
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-3">
+          <h3 class="text-[11px] font-bold uppercase tracking-[0.18em] text-white">Kurumsal</h3>
+          <ul class="mt-5 space-y-3 text-[13px]">
+            <li><a href="kurumsal.html" class="transition-colors hover:text-white">Hakkımızda</a></li>
+            <li><a href="markalar.html" class="transition-colors hover:text-white">Markalarımız</a></li>
+            <li><a href="kurumsal.html#uretim" class="transition-colors hover:text-white">Üretim</a></li>
+            <li><a href="medya.html" class="transition-colors hover:text-white">Medya</a></li>
+            <li><a href="kariyer.html" class="transition-colors hover:text-white">Kariyer</a></li>
+            <li><a href="iletisim.html" class="transition-colors hover:text-white">İletişim</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-3">
+          <h3 class="text-[11px] font-bold uppercase tracking-[0.18em] text-white">Marka Siteleri</h3>
+          <ul class="mt-5 space-y-3 text-[13px]">
+            <li><a href="https://www.betonstar.com/" target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-white">betonstar.com ↗</a></li>
+            <li><a href="https://www.fermec.com.tr/" target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-white">fermec.com.tr ↗</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-2">
+          <h3 class="text-[11px] font-bold uppercase tracking-[0.18em] text-white">Merkez</h3>
+          <p class="mt-5 text-[13px] leading-relaxed">
+            Subaşı Mah. Osman Dirik Cad.<br />No: 111/2<br />Torbalı / İzmir
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-12 flex flex-col gap-4 border-t border-white/10 pt-7 text-[11px] uppercase tracking-[0.14em] sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; 2026 BOZKURT Endüstri. Tüm hakları saklıdır.</p>
+        <div class="flex gap-6">
+          <a href="#" class="transition-colors hover:text-white">KVKK</a>
+          <a href="#" class="transition-colors hover:text-white">Çerez Politikası</a>
+          <a href="#" class="transition-colors hover:text-white">Bilgi Toplumu Hizmetleri</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn?.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      menuBtn.setAttribute('aria-expanded', String(!isOpen));
+    });
+
+    mobileMenu?.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    /* Açılır menüler (Markalarımız + Kurumsal) */
+    document.querySelectorAll('.nav-drop').forEach((drop) => {
+      const dropBtn = drop.querySelector('.nav-drop-trigger');
+      if (!dropBtn) return;
+
+      const setDrop = (open) => {
+        if (open) drop.setAttribute('data-open', '');
+        else drop.removeAttribute('data-open');
+        dropBtn.setAttribute('aria-expanded', String(open));
+      };
+
+      dropBtn.addEventListener('click', () => {
+        const willOpen = !drop.hasAttribute('data-open');
+        // Aynı anda tek menü açık kalsın
+        document.querySelectorAll('.nav-drop[data-open]').forEach((other) => {
+          if (other !== drop) {
+            other.removeAttribute('data-open');
+            other.querySelector('.nav-drop-trigger')?.setAttribute('aria-expanded', 'false');
+          }
+        });
+        setDrop(willOpen);
+      });
+
+      document.addEventListener('click', (event) => {
+        if (!drop.contains(event.target)) setDrop(false);
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && drop.hasAttribute('data-open')) {
+          setDrop(false);
+          dropBtn.focus();
+        }
+      });
+
+      drop.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => setDrop(false));
+      });
+    });
+
+    const header = document.getElementById('siteHeader');
+    const onScroll = () => header.classList.toggle('shadow-sm', window.scrollY > 8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('formStatus');
+
+    form?.addEventListener('submit', (event) => {
+      event.preventDefault();
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+      status.textContent = 'Mesajınız alındı. Ekibimiz en kısa sürede size dönüş yapacak.';
+      status.classList.remove('hidden');
+      form.reset();
+    });
+  </script>
+</body>
+</html>

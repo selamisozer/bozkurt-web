@@ -101,7 +101,31 @@
             </div>
           </div>
         </div>
-        <a href="kurumsal.html" class="nav-item">Kurumsal</a>
+        <div class="nav-drop nav-drop--list">
+          <button type="button" id="kurumsalBtn" class="nav-item nav-drop-trigger" aria-expanded="false" aria-controls="kurumsalMenu">
+            Kurumsal
+            <svg class="nav-drop-chev h-2.5 w-2.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="square" d="m6 9.5 6 6 6-6" />
+            </svg>
+          </button>
+
+          <div id="kurumsalMenu" class="nav-drop-panel">
+            <div class="nav-drop-card">
+              <a href="kurumsal.html" class="nav-list-link">
+                <span class="nav-list-name">Kurumsal Yapı<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg></span>
+                <span class="nav-list-desc">Hakkımızda, üretim ve kalite</span>
+              </a>
+              <a href="medya.html" class="nav-list-link">
+                <span class="nav-list-name">Medya<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg></span>
+                <span class="nav-list-desc">Basın bültenleri ve basın kiti</span>
+              </a>
+              <a href="kariyer.html" class="nav-list-link">
+                <span class="nav-list-name">Kariyer<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg></span>
+                <span class="nav-list-desc">Açık pozisyonlar ve başvuru</span>
+              </a>
+            </div>
+          </div>
+        </div>
         <a href="iletisim.html" class="nav-item">İletişim</a>
         <a href="iletisim.html" class="ml-2 bg-navy px-6 py-3 text-[11px] font-bold uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:bg-navy-dark">
           Teklif Alın
@@ -140,6 +164,8 @@
           </div>
         </div>
         <a href="kurumsal.html" class="nav-item-mobile">Kurumsal</a>
+        <a href="medya.html" class="nav-item-mobile nav-item-mobile--sub">Medya</a>
+        <a href="kariyer.html" class="nav-item-mobile nav-item-mobile--sub border-0">Kariyer</a>
         <a href="iletisim.html" class="nav-item-mobile border-0">İletişim</a>
         <a href="iletisim.html" class="mt-3 bg-navy px-6 py-4 text-center text-[11px] font-bold uppercase tracking-[0.18em] text-white">Teklif Alın</a>
       </nav>
@@ -570,6 +596,8 @@
             <li><a href="kurumsal.html" class="transition-colors hover:text-white">Hakkımızda</a></li>
             <li><a href="markalar.html" class="transition-colors hover:text-white">Markalarımız</a></li>
             <li><a href="kurumsal.html#uretim" class="transition-colors hover:text-white">Üretim</a></li>
+            <li><a href="medya.html" class="transition-colors hover:text-white">Medya</a></li>
+            <li><a href="kariyer.html" class="transition-colors hover:text-white">Kariyer</a></li>
             <li><a href="iletisim.html" class="transition-colors hover:text-white">İletişim</a></li>
           </ul>
         </div>
@@ -618,37 +646,44 @@
       });
     });
 
-    /* Markalar açılır menüsü */
-    const markalarDrop = document.getElementById('markalarBtn')?.closest('.nav-drop');
-
-    if (markalarDrop) {
-      const dropBtn = document.getElementById('markalarBtn');
+    /* Açılır menüler (Markalarımız + Kurumsal) */
+    document.querySelectorAll('.nav-drop').forEach((drop) => {
+      const dropBtn = drop.querySelector('.nav-drop-trigger');
+      if (!dropBtn) return;
 
       const setDrop = (open) => {
-        if (open) markalarDrop.setAttribute('data-open', '');
-        else markalarDrop.removeAttribute('data-open');
+        if (open) drop.setAttribute('data-open', '');
+        else drop.removeAttribute('data-open');
         dropBtn.setAttribute('aria-expanded', String(open));
       };
 
       dropBtn.addEventListener('click', () => {
-        setDrop(!markalarDrop.hasAttribute('data-open'));
+        const willOpen = !drop.hasAttribute('data-open');
+        // Aynı anda tek menü açık kalsın
+        document.querySelectorAll('.nav-drop[data-open]').forEach((other) => {
+          if (other !== drop) {
+            other.removeAttribute('data-open');
+            other.querySelector('.nav-drop-trigger')?.setAttribute('aria-expanded', 'false');
+          }
+        });
+        setDrop(willOpen);
       });
 
       document.addEventListener('click', (event) => {
-        if (!markalarDrop.contains(event.target)) setDrop(false);
+        if (!drop.contains(event.target)) setDrop(false);
       });
 
       document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && markalarDrop.hasAttribute('data-open')) {
+        if (event.key === 'Escape' && drop.hasAttribute('data-open')) {
           setDrop(false);
           dropBtn.focus();
         }
       });
 
-      markalarDrop.querySelectorAll('a').forEach((link) => {
+      drop.querySelectorAll('a').forEach((link) => {
         link.addEventListener('click', () => setDrop(false));
       });
-    }
+    });
 
     const header = document.getElementById('siteHeader');
     const onScroll = () => header.classList.toggle('shadow-sm', window.scrollY > 8);
