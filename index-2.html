@@ -155,7 +155,7 @@
          (data-label + data-loc doldur) ve .hero-full-tabs içine bir düğme ekle. -->
     <section class="hero-full" aria-label="Marka vitrini">
       <div class="hero-full-stage" data-xfeed-group>
-        <div class="xfeed xfeed--full" data-xfeed data-hold="6500">
+        <div class="xfeed xfeed--full" data-xfeed data-hold="6500" data-pause="controls">
 
           <div class="xfeed-slide is-active" data-xfeed-slide
                data-label="Betonstar" data-loc="Torbalı / İzmir">
@@ -196,7 +196,7 @@
 
           <span class="hero-side-label" aria-hidden="true">Ürün Vitrini</span>
 
-          <div class="hero-full-controls">
+          <div class="hero-full-controls" data-xfeed-controls>
             <span class="hero-full-index">
               <span data-xfeed-index>01</span> / <span data-xfeed-total>02</span>
             </span>
@@ -807,8 +807,26 @@
         });
       });
 
-      group.addEventListener('mouseenter', stop);
-      group.addEventListener('mouseleave', start);
+      // Duraklatma kapsamı.
+      // Kart görsellerinde (varsayılan) tüm yüzey duraklatır; bu, küçük bir
+      // panoda okumak için iyidir. Tam ekran hero'da ise tüm yüzeyi dinlemek
+      // hataya yol açar: fare zaten hep hero'nun üstünde olduğu için
+      // mouseenter bir kez tetiklenir, mouseleave hiç gelmez ve dönüş kalıcı
+      // olarak durur. O yüzden tam ekranda yalnızca denetimler duraklatır.
+      const pauseMode = root.dataset.pause || 'area';
+      const pauseArea =
+        pauseMode === 'off'
+          ? null
+          : pauseMode === 'controls'
+            ? root.querySelector('[data-xfeed-controls]')
+            : group;
+
+      if (pauseArea) {
+        pauseArea.addEventListener('mouseenter', stop);
+        pauseArea.addEventListener('mouseleave', start);
+      }
+
+      // Klavye odağı: sayfa klavyeyle geziniliyorsa içerik sabit kalsın
       group.addEventListener('focusin', stop);
       group.addEventListener('focusout', (event) => {
         if (!group.contains(event.relatedTarget)) start();

@@ -803,8 +803,26 @@
         });
       });
 
-      group.addEventListener('mouseenter', stop);
-      group.addEventListener('mouseleave', start);
+      // Duraklatma kapsamı.
+      // Kart görsellerinde (varsayılan) tüm yüzey duraklatır; bu, küçük bir
+      // panoda okumak için iyidir. Tam ekran hero'da ise tüm yüzeyi dinlemek
+      // hataya yol açar: fare zaten hep hero'nun üstünde olduğu için
+      // mouseenter bir kez tetiklenir, mouseleave hiç gelmez ve dönüş kalıcı
+      // olarak durur. O yüzden tam ekranda yalnızca denetimler duraklatır.
+      const pauseMode = root.dataset.pause || 'area';
+      const pauseArea =
+        pauseMode === 'off'
+          ? null
+          : pauseMode === 'controls'
+            ? root.querySelector('[data-xfeed-controls]')
+            : group;
+
+      if (pauseArea) {
+        pauseArea.addEventListener('mouseenter', stop);
+        pauseArea.addEventListener('mouseleave', start);
+      }
+
+      // Klavye odağı: sayfa klavyeyle geziniliyorsa içerik sabit kalsın
       group.addEventListener('focusin', stop);
       group.addEventListener('focusout', (event) => {
         if (!group.contains(event.relatedTarget)) start();
