@@ -12,7 +12,7 @@ declare(strict_types=1);
 
 const TO_EMAIL   = 'info@bozkurt-bf.com';   // Formun düşeceği adres
 const FROM_EMAIL = 'info@bozkurt-bf.com'; // Mevcut kutu; Reply-To gönderene ayarlanır
-const SITE_NAME  = 'BOZKURT';
+const SITE_NAME  = 'BOZKURT-BF';
 const COOLDOWN   = 20; // saniye
 
 ini_set('default_charset', 'UTF-8');
