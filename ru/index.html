@@ -31,6 +31,17 @@
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="../favicon.ico" sizes="any" />
   <!-- /i18n:head -->
+<noscript>
+<style>
+.cine-intro{display:none!important}
+.cine-final{opacity:1!important}
+.cine-logo,.cine-star,.cine-brands{opacity:1!important;transform:none!important}
+.cine-fleet-media{clip-path:inset(0 0 0 0)!important}
+.cine-bg{opacity:1!important}
+.cine-grid{opacity:.16!important}
+.cine-skip{display:none!important}
+</style>
+</noscript>
 </head>
 
 <body class="bg-white text-charcoal font-body">
@@ -171,52 +182,61 @@
 
   <main>
 
-    <!-- ============ HERO — FİLO / GÖKYÜZÜ ============ -->
-    <section class="brand-hero">
-      <div class="brand-hero-bg" aria-hidden="true"></div>
-      <div class="brand-hero-grid" aria-hidden="true"></div>
-      <div class="brand-hero-glow" aria-hidden="true"></div>
+    <!-- ============ SİNEMATİK HERO ============ -->
+    <section class="cine" id="cine">
+      <div class="cine-bg" aria-hidden="true"></div>
+      <div class="cine-grid" aria-hidden="true"></div>
 
-      <div class="brand-hero-inner">
-        <img src="../assets/logos/bozkurt-white.png" alt="BOZKURT" class="brand-hero-logo" />
-
-        <div class="brand-hero-lineup">
-          <img src="../assets/img/hero-lineup.png" alt="" aria-hidden="true" class="brand-hero-lineup-img" />
+      <div class="cine-intro" id="cineIntro" aria-hidden="true">
+        <div class="cine-word" id="cineWord">
+          <img src="../assets/logos/bozkurt-nok.png" alt="" class="cine-word-img" />
+          <img src="../assets/img/intro-k.png" alt="" class="cine-k" id="cineK" data-k="1" />
+          <img src="../assets/img/intro-k.png" alt="" class="cine-k cine-k--clone" id="cineK2" data-k="2" />
         </div>
+        <span class="cine-spark" id="cineSpark"></span>
+        <div class="cine-particles" id="cineParticles"></div>
+      </div>
 
-        <div class="brand-hero-brands">
-          <div class="brand-hero-brand">
-              <span class="brand-hero-brand-name">Betonstar</span>
-              <a href="https://www.betonstar.com/" target="_blank" rel="noopener noreferrer" class="brand-hero-brand-link">betonstar.com</a>
-            </div>
-          <div class="brand-hero-brand brand-hero-brand--end">
-              <span class="brand-hero-brand-name">Fermec</span>
-              <a href="https://fermec.com/" target="_blank" rel="noopener noreferrer" class="brand-hero-brand-link">fermec.com</a>
-            </div>
-        </div>
+      <div class="cine-final" id="cineFinal">
+        <img src="../assets/logos/bozkurt-white.png" alt="BOZKURT" class="cine-logo" id="cineLogo" />
 
-        <div class="brand-hero-mobile">
-          <div class="brand-mobile-row">
-            <img src="../assets/img/hero-lineup-betonstar.png" alt="" aria-hidden="true" />
-            <div class="brand-hero-brand">
-              <span class="brand-hero-brand-name">Betonstar</span>
-              <a href="https://www.betonstar.com/" target="_blank" rel="noopener noreferrer" class="brand-hero-brand-link">betonstar.com</a>
+        <svg class="cine-star" id="cineStar" viewBox="0 0 200 200" aria-hidden="true">
+          <defs>
+            <radialGradient id="cineStarGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity=".6" />
+              <stop offset="45%" stop-color="#3c9cd7" stop-opacity=".22" />
+              <stop offset="100%" stop-color="#3c9cd7" stop-opacity="0" />
+            </radialGradient>
+          </defs>
+          <circle cx="100" cy="100" r="96" fill="url(#cineStarGlow)" />
+          <circle class="cine-star-ring" cx="100" cy="100" r="84" fill="none" stroke="#bbc4ca" stroke-opacity=".22" stroke-dasharray="2 9" />
+          <path class="cine-star-shape" d="M100 8C104.5 66 134 95.5 192 100C134 104.5 104.5 134 100 192C95.5 134 66 104.5 8 100C66 95.5 95.5 66 100 8Z" fill="#ffffff" />
+        </svg>
+
+        <div class="cine-fleet" id="cineFleet">
+          <div class="cine-fleet-media">
+            <img class="cine-fleet-desktop" src="../assets/img/hero-lineup.png" alt="" />
+            <div class="cine-fleet-mobile" aria-hidden="true">
+              <img src="../assets/img/hero-lineup-betonstar.png" alt="" />
+              <img src="../assets/img/hero-lineup-fermec.png" alt="" />
             </div>
           </div>
-          <div class="brand-mobile-row brand-mobile-row--fermec">
-            <img src="../assets/img/hero-lineup-fermec.png" alt="" aria-hidden="true" />
-            <div class="brand-hero-brand brand-hero-brand--end">
-              <span class="brand-hero-brand-name">Fermec</span>
-              <a href="https://fermec.com/" target="_blank" rel="noopener noreferrer" class="brand-hero-brand-link">fermec.com</a>
-            </div>
+          <span class="cine-drawline" id="cineDrawline" aria-hidden="true"></span>
+        </div>
+
+        <div class="cine-brands" id="cineBrands">
+          <div class="cine-brand">
+            <span class="cine-brand-name">Betonstar</span>
+            <a href="https://www.betonstar.com/" target="_blank" rel="noopener noreferrer" class="cine-brand-link">betonstar.com</a>
+          </div>
+          <div class="cine-brand cine-brand--end">
+            <span class="cine-brand-name">Fermec</span>
+            <a href="https://fermec.com/" target="_blank" rel="noopener noreferrer" class="cine-brand-link">fermec.com</a>
           </div>
         </div>
       </div>
 
-      <a href="#giris" class="hero-scroll brand-hero-scroll">
-        <span class="hero-scroll-track" aria-hidden="true"></span>
-        <span class="hero-scroll-text">Смотреть</span>
-      </a>
+      <button type="button" class="cine-skip" id="cineSkip">Пропустить</button>
     </section>
 
     <!-- ============ GİRİŞ MANİFESTOSU ============ -->
@@ -915,5 +935,97 @@
     }
   </script>
   <script src="../assets/js/site.js" defer></script>
+
+  <script>
+    (() => {
+      const cine = document.getElementById('cine');
+      if (!cine) return;
+      const intro = document.getElementById('cineIntro');
+      const word = document.getElementById('cineWord');
+      const k1 = document.getElementById('cineK');
+      const k2 = document.getElementById('cineK2');
+      const spark = document.getElementById('cineSpark');
+      const particles = document.getElementById('cineParticles');
+      const skip = document.getElementById('cineSkip');
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      let timers = [];
+      let done = false;
+
+      function after(ms, fn) { timers.push(setTimeout(fn, ms)); }
+
+      function finalize() {
+        if (done) return;
+        done = true;
+        timers.forEach(clearTimeout);
+        timers = [];
+        cine.classList.add('is-final', 'is-draw', 'is-brands', 'is-done', 'is-instant');
+        intro.style.opacity = '0';
+        intro.style.pointerEvents = 'none';
+      }
+
+      function buildParticles() {
+        const frag = document.createDocumentFragment();
+        const spread = Math.max(window.innerWidth, window.innerHeight) * 0.62;
+        for (let i = 0; i < 96; i++) {
+          const el = document.createElement('span');
+          const angle = Math.random() * Math.PI * 2;
+          const dist = 90 + Math.random() * spread;
+          const size = 3 + Math.random() * 5;
+          el.style.setProperty('--dx', Math.cos(angle) * dist + 'px');
+          el.style.setProperty('--dy', Math.sin(angle) * dist + 'px');
+          el.style.setProperty('--d', (Math.random() * 0.35).toFixed(2) + 's');
+          el.style.width = size + 'px';
+          el.style.height = size + 'px';
+          frag.appendChild(el);
+        }
+        particles.appendChild(frag);
+      }
+
+      function measure() {
+        const cr = cine.getBoundingClientRect();
+        const kr = k1.getBoundingClientRect();
+        const sx = kr.left + kr.width / 2;
+        const sy = kr.top + kr.height / 2;
+        const cx = cr.left + cr.width / 2;
+        const mobile = cr.width < 1024;
+        if (mobile) cine.style.setProperty('--k-scale', '1.12');
+        const x1 = mobile ? 0.37 : 0.43;
+        const x2 = mobile ? 0.63 : 0.57;
+        const t1x = cr.left + cr.width * x1 - sx;
+        const t1y = cr.top + cr.height * 0.34 - sy;
+        const t2x = cr.left + cr.width * x2 - sx;
+        const t2y = cr.top + cr.height * 0.34 - sy;
+        k1.style.setProperty('--k1x', t1x + 'px');
+        k1.style.setProperty('--k1y', t1y + 'px');
+        k2.style.setProperty('--k2x', t2x + 'px');
+        k2.style.setProperty('--k2y', t2y + 'px');
+      }
+
+      function start() {
+        if (done) return;
+        if (reduce) { finalize(); return; }
+        buildParticles();
+        requestAnimationFrame(() => {
+          measure();
+          after(80, () => word.classList.add('is-in'));
+          after(900, () => { k1.classList.add('is-fly'); k2.classList.add('is-fly'); });
+          after(1200, () => word.classList.add('is-gone'));
+          after(2000, () => { spark.classList.add('is-on'); particles.classList.add('is-burst'); });
+          after(2400, () => spark.classList.add('is-grow'));
+          after(2550, () => word.classList.add('is-kgone'));
+          after(2800, () => cine.classList.add('is-final'));
+          after(3000, () => cine.classList.add('is-draw'));
+          after(5200, () => cine.classList.add('is-brands'));
+          after(5600, () => cine.classList.add('is-done'));
+          after(9000, finalize);
+        });
+      }
+
+      skip.addEventListener('click', finalize);
+      if (document.readyState === 'complete') start();
+      else window.addEventListener('load', start, { once: true });
+    })();
+  </script>
+
 </body>
 </html>
