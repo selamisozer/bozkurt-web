@@ -210,15 +210,15 @@
           </defs>
           <circle cx="100" cy="100" r="96" fill="url(#cineStarGlow)" />
           <circle class="cine-star-ring" cx="100" cy="100" r="84" fill="none" stroke="#bbc4ca" stroke-opacity=".22" stroke-dasharray="2 9" />
-          <path class="cine-star-shape" d="M100 8C104.5 66 134 95.5 192 100C134 104.5 104.5 134 100 192C95.5 134 66 104.5 8 100C66 95.5 95.5 66 100 8Z" fill="#ffffff" />
+          <path class="cine-star-shape" d="M100 10 L190 100 L100 190 L10 100 Z" fill="#ffffff" />
         </svg>
 
         <div class="cine-fleet" id="cineFleet">
           <div class="cine-fleet-media">
-            <img class="cine-fleet-desktop" src="../assets/img/hero-lineup.png" alt="" />
+            <img class="cine-fleet-desktop" src="../assets/img/hero-lineup.svg" alt="" />
             <div class="cine-fleet-mobile" aria-hidden="true">
-              <img src="../assets/img/hero-lineup-betonstar.png" alt="" />
-              <img src="../assets/img/hero-lineup-fermec.png" alt="" />
+              <img src="../assets/img/hero-lineup-betonstar.svg" alt="" />
+              <img src="../assets/img/hero-lineup-fermec.svg" alt="" />
             </div>
           </div>
           <span class="cine-drawline" id="cineDrawline" aria-hidden="true"></span>
@@ -1011,8 +1011,8 @@
           after(900, () => { k1.classList.add('is-fly'); k2.classList.add('is-fly'); });
           after(1200, () => word.classList.add('is-gone'));
           after(2000, () => { spark.classList.add('is-on'); particles.classList.add('is-burst'); });
-          after(2400, () => spark.classList.add('is-grow'));
-          after(2550, () => word.classList.add('is-kgone'));
+          after(2550, () => spark.classList.add('is-grow'));
+          after(2500, () => word.classList.add('is-kgone'));
           after(2800, () => cine.classList.add('is-final'));
           after(3000, () => cine.classList.add('is-draw'));
           after(5200, () => cine.classList.add('is-brands'));
