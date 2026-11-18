@@ -171,38 +171,46 @@
 
   <main>
 
-    <!-- ============ HERO — GÖKYÜZÜ / YILDIZ ============ -->
-    <!-- Kurumsal kimlik kılavuzu: yıldız motifi, Bozkurt logosundaki "k"
-         harfinin boşluğundan türetilir; gökyüzü degradesi üzerinde yaşar. -->
+    <!-- ============ HERO — FİLO / GÖKYÜZÜ ============ -->
     <section class="brand-hero">
       <div class="brand-hero-bg" aria-hidden="true"></div>
-      <div class="brand-hero-halo" aria-hidden="true"></div>
-      <div class="star-field brand-hero-stars" aria-hidden="true"></div>
-
-      <span class="brand-spark" style="--x:14%;--y:26%;--s:5px;--d:0s" aria-hidden="true"></span>
-      <span class="brand-spark" style="--x:82%;--y:18%;--s:4px;--d:1.4s" aria-hidden="true"></span>
-      <span class="brand-spark" style="--x:72%;--y:64%;--s:6px;--d:.7s" aria-hidden="true"></span>
-      <span class="brand-spark" style="--x:22%;--y:72%;--s:4px;--d:2.1s" aria-hidden="true"></span>
-      <span class="brand-spark" style="--x:47%;--y:12%;--s:3px;--d:1.1s" aria-hidden="true"></span>
-      <span class="brand-spark" style="--x:62%;--y:86%;--s:4px;--d:2.6s" aria-hidden="true"></span>
+      <div class="brand-hero-grid" aria-hidden="true"></div>
+      <div class="brand-hero-glow" aria-hidden="true"></div>
 
       <div class="brand-hero-inner">
         <img src="assets/logos/bozkurt-white.png" alt="BOZKURT" class="brand-hero-logo" />
-        <div class="brand-hero-core" aria-hidden="true">
-          <svg class="brand-hero-star" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <radialGradient id="heroStarGlow" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stop-color="#ffffff" stop-opacity=".55" />
-                <stop offset="45%" stop-color="#3c9cd7" stop-opacity=".22" />
-                <stop offset="100%" stop-color="#3c9cd7" stop-opacity="0" />
-              </radialGradient>
-            </defs>
-            <circle cx="100" cy="100" r="96" fill="url(#heroStarGlow)" />
-            <circle class="brand-hero-ring" cx="100" cy="100" r="82" fill="none" stroke="#bbc4ca" stroke-opacity=".22" stroke-dasharray="2 9" />
-            <path class="brand-hero-star-shape" d="M100 8C104.5 66 134 95.5 192 100C134 104.5 104.5 134 100 192C95.5 134 66 104.5 8 100C66 95.5 95.5 66 100 8Z" fill="#ffffff" />
-          </svg>
+
+        <div class="brand-hero-lineup">
+          <img src="assets/img/hero-lineup.png" alt="" aria-hidden="true" class="brand-hero-lineup-img" />
         </div>
-        <p class="brand-hero-tagline">Be Smart · Be Strong · <span class="text-white">Powered by BOZKURT</span></p>
+
+        <div class="brand-hero-brands">
+          <div class="brand-hero-brand">
+              <span class="brand-hero-brand-name">Betonstar</span>
+              <a href="https://www.betonstar.com/" target="_blank" rel="noopener noreferrer" class="brand-hero-brand-link">betonstar.com</a>
+            </div>
+          <div class="brand-hero-brand brand-hero-brand--end">
+              <span class="brand-hero-brand-name">Fermec</span>
+              <a href="https://fermec.com/" target="_blank" rel="noopener noreferrer" class="brand-hero-brand-link">fermec.com</a>
+            </div>
+        </div>
+
+        <div class="brand-hero-mobile">
+          <div class="brand-mobile-row">
+            <img src="assets/img/hero-lineup-betonstar.png" alt="" aria-hidden="true" />
+            <div class="brand-hero-brand">
+              <span class="brand-hero-brand-name">Betonstar</span>
+              <a href="https://www.betonstar.com/" target="_blank" rel="noopener noreferrer" class="brand-hero-brand-link">betonstar.com</a>
+            </div>
+          </div>
+          <div class="brand-mobile-row brand-mobile-row--fermec">
+            <img src="assets/img/hero-lineup-fermec.png" alt="" aria-hidden="true" />
+            <div class="brand-hero-brand brand-hero-brand--end">
+              <span class="brand-hero-brand-name">Fermec</span>
+              <a href="https://fermec.com/" target="_blank" rel="noopener noreferrer" class="brand-hero-brand-link">fermec.com</a>
+            </div>
+          </div>
+        </div>
       </div>
 
       <a href="#giris" class="hero-scroll brand-hero-scroll">
