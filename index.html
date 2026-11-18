@@ -33,15 +33,20 @@
   <!-- /i18n:head -->
 <noscript>
 <style>
-.cine-intro{display:none!important}
-.cine-final{opacity:1!important}
-.cine-logo,.cine-star,.cine-brands{opacity:1!important;transform:none!important}
+.cine-word-wrap{top:16%!important}
+.cine-word{opacity:1!important;transform:none!important;width:min(56vw,560px)!important}
+.cine-word-full{opacity:1!important}
+.cine-k{display:none!important}
+.cine-star{opacity:1!important;top:37%!important;transform:translate(-50%,-50%) scale(1)!important}
 .cine-fleet-media{clip-path:inset(0 0 0 0)!important}
 .cine-bg{opacity:1!important}
-.cine-grid{opacity:.16!important}
+.cine-grid{opacity:.16!important;transform:none!important}
+.cine-brands{opacity:1!important}
 .cine-skip{display:none!important}
+@media (max-width:1023px){.cine-word{width:min(80vw,300px)!important}.cine-star{width:140px!important}}
 </style>
 </noscript>
+
 </head>
 
 <body class="bg-white text-charcoal font-body">
@@ -186,21 +191,19 @@
     <section class="cine" id="cine">
       <div class="cine-bg" aria-hidden="true"></div>
       <div class="cine-grid" aria-hidden="true"></div>
+      <div class="cine-blur" aria-hidden="true"></div>
 
       <div class="cine-intro" id="cineIntro" aria-hidden="true">
-        <div class="cine-word" id="cineWord">
-          <img src="assets/logos/bozkurt-nok.png" alt="" class="cine-word-img" />
-          <img src="assets/img/intro-k.png" alt="" class="cine-k" id="cineK" data-k="1" />
-          <img src="assets/img/intro-k.png" alt="" class="cine-k cine-k--clone" id="cineK2" data-k="2" />
+        <div class="cine-word-wrap" id="cineWordWrap">
+          <div class="cine-word" id="cineWord">
+            <img src="assets/logos/bozkurt-nok.png" alt="" class="cine-word-img" />
+            <img src="assets/logos/bozkurt-white.png" alt="" class="cine-word-full" />
+            <img src="assets/img/intro-k.png" alt="" class="cine-k" id="cineK" data-k="1" />
+            <img src="assets/img/intro-k.png" alt="" class="cine-k cine-k--clone" id="cineK2" data-k="2" />
+          </div>
         </div>
-        <span class="cine-spark" id="cineSpark"></span>
-        <div class="cine-particles" id="cineParticles"></div>
-      </div>
 
-      <div class="cine-final" id="cineFinal">
-        <img src="assets/logos/bozkurt-white.png" alt="BOZKURT" class="cine-logo" id="cineLogo" />
-
-        <svg class="cine-star" id="cineStar" viewBox="0 0 200 200" aria-hidden="true">
+        <svg class="cine-star" id="cineStar" viewBox="0 0 200 200">
           <defs>
             <radialGradient id="cineStarGlow" cx="50%" cy="50%" r="50%">
               <stop offset="0%" stop-color="#ffffff" stop-opacity=".6" />
@@ -213,6 +216,10 @@
           <path class="cine-star-shape" d="M100 10 L190 100 L100 190 L10 100 Z" fill="#ffffff" />
         </svg>
 
+        <div class="cine-particles" id="cineParticles"></div>
+      </div>
+
+      <div class="cine-final" id="cineFinal">
         <div class="cine-fleet" id="cineFleet">
           <div class="cine-fleet-media">
             <img class="cine-fleet-desktop" src="assets/img/hero-lineup.svg" alt="" />
@@ -964,11 +971,11 @@
     (() => {
       const cine = document.getElementById('cine');
       if (!cine) return;
-      const intro = document.getElementById('cineIntro');
+      const wordWrap = document.getElementById('cineWordWrap');
       const word = document.getElementById('cineWord');
       const k1 = document.getElementById('cineK');
       const k2 = document.getElementById('cineK2');
-      const spark = document.getElementById('cineSpark');
+      const star = document.getElementById('cineStar');
       const particles = document.getElementById('cineParticles');
       const skip = document.getElementById('cineSkip');
       const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -977,14 +984,24 @@
 
       function after(ms, fn) { timers.push(setTimeout(fn, ms)); }
 
+      function setWordScale() {
+        const cr = cine.getBoundingClientRect();
+        const target = cr.width < 1024 ? Math.min(cr.width * 0.8, 300) : Math.min(cr.width * 0.56, 720);
+        const scale = target / word.offsetWidth;
+        word.style.setProperty('--word-scale', scale.toFixed(3));
+      }
+
       function finalize() {
         if (done) return;
         done = true;
         timers.forEach(clearTimeout);
         timers = [];
+        setWordScale();
         cine.classList.add('is-final', 'is-draw', 'is-brands', 'is-done', 'is-instant');
-        intro.style.opacity = '0';
-        intro.style.pointerEvents = 'none';
+        wordWrap.classList.add('is-top');
+        word.classList.add('is-in', 'is-fill', 'is-kgone');
+        star.classList.add('is-on', 'is-star');
+        particles.style.display = 'none';
       }
 
       function buildParticles() {
@@ -1007,22 +1024,17 @@
 
       function measure() {
         const cr = cine.getBoundingClientRect();
+        const mobile = cr.width < 1024;
+        if (mobile) cine.style.setProperty('--k-scale', '1.12');
         const kr = k1.getBoundingClientRect();
         const sx = kr.left + kr.width / 2;
         const sy = kr.top + kr.height / 2;
-        const cx = cr.left + cr.width / 2;
-        const mobile = cr.width < 1024;
-        if (mobile) cine.style.setProperty('--k-scale', '1.12');
         const x1 = mobile ? 0.37 : 0.43;
         const x2 = mobile ? 0.63 : 0.57;
-        const t1x = cr.left + cr.width * x1 - sx;
-        const t1y = cr.top + cr.height * 0.34 - sy;
-        const t2x = cr.left + cr.width * x2 - sx;
-        const t2y = cr.top + cr.height * 0.34 - sy;
-        k1.style.setProperty('--k1x', t1x + 'px');
-        k1.style.setProperty('--k1y', t1y + 'px');
-        k2.style.setProperty('--k2x', t2x + 'px');
-        k2.style.setProperty('--k2y', t2y + 'px');
+        k1.style.setProperty('--k1x', (cr.left + cr.width * x1 - sx) + 'px');
+        k1.style.setProperty('--k1y', (cr.top + cr.height * (mobile ? 0.30 : 0.27) - sy) + 'px');
+        k2.style.setProperty('--k2x', (cr.left + cr.width * x2 - sx) + 'px');
+        k2.style.setProperty('--k2y', (cr.top + cr.height * (mobile ? 0.30 : 0.27) - sy) + 'px');
       }
 
       function start() {
@@ -1033,14 +1045,15 @@
           measure();
           after(80, () => word.classList.add('is-in'));
           after(900, () => { k1.classList.add('is-fly'); k2.classList.add('is-fly'); });
-          after(1200, () => word.classList.add('is-gone'));
-          after(2000, () => { spark.classList.add('is-on'); particles.classList.add('is-burst'); });
-          after(2550, () => spark.classList.add('is-grow'));
-          after(2500, () => word.classList.add('is-kgone'));
+          after(1900, () => star.classList.add('is-on'));
+          after(2050, () => particles.classList.add('is-burst'));
+          after(2400, () => word.classList.add('is-kgone'));
+          after(2500, () => { setWordScale(); wordWrap.classList.add('is-top'); word.classList.add('is-fill'); });
+          after(3200, () => star.classList.add('is-star'));
           after(2800, () => cine.classList.add('is-final'));
           after(3000, () => cine.classList.add('is-draw'));
-          after(5200, () => cine.classList.add('is-brands'));
-          after(5600, () => cine.classList.add('is-done'));
+          after(5250, () => cine.classList.add('is-brands'));
+          after(5400, () => cine.classList.add('is-done'));
           after(9000, finalize);
         });
       }
