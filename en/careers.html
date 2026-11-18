@@ -35,36 +35,6 @@
 
 <body class="bg-white text-charcoal font-body">
 
-  <!-- ============ ÜST BİLGİ ÇUBUĞU ============ -->
-  <div class="bg-navy-deep text-white/70 text-[11px] tracking-[0.14em] uppercase">
-    <div class="container-page flex h-9 items-center justify-between">
-      <span class="hidden sm:inline">BOZKURT-BF</span>
-      <div class="flex items-center gap-5">
-        <a href="tel:+902328685600" class="transition-colors hover:text-white">+90 232 868 56 00</a>
-        <span class="hidden text-white/25 md:inline">|</span>
-        <a href="mailto:info@bozkurt-bf.com" class="hidden transition-colors hover:text-white md:inline">info@bozkurt-bf.com</a>
-        <span class="text-white/25">|</span>
-        <!-- i18n:lang -->
-        <details class="relative shrink-0" data-lang-switch>
-          <summary class="flex cursor-pointer list-none items-center gap-1.5 text-white [&::-webkit-details-marker]:hidden">
-            <span>EN</span>
-            <svg class="h-3 w-3 text-white/50" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="square" d="m6 9 6 6 6-6" /></svg>
-            <span class="sr-only">Language selection</span>
-          </summary>
-          <div class="absolute end-0 top-full z-[60] mt-2 w-44 border border-white/10 bg-navy-deep/95 p-1.5 shadow-xl backdrop-blur">
-        <a href="../kariyer.html" hreflang="tr" lang="tr" class="flex items-center justify-between gap-3 px-3 py-2 text-[11px] font-medium text-white/65 transition-colors hover:bg-white/10 hover:text-white"><span>Türkçe</span><span class="text-[9px] tracking-[0.18em] text-white/40">TR</span></a>
-        <a href="careers.html" hreflang="en" lang="en" aria-current="true" class="flex items-center justify-between gap-3 bg-white/10 px-3 py-2 text-[11px] font-semibold text-white"><span>English</span><span class="text-[9px] tracking-[0.18em] text-white/40">EN</span></a>
-        <a href="../de/karriere.html" hreflang="de" lang="de" class="flex items-center justify-between gap-3 px-3 py-2 text-[11px] font-medium text-white/65 transition-colors hover:bg-white/10 hover:text-white"><span>Deutsch</span><span class="text-[9px] tracking-[0.18em] text-white/40">DE</span></a>
-        <a href="../ru/careers.html" hreflang="ru" lang="ru" class="flex items-center justify-between gap-3 px-3 py-2 text-[11px] font-medium text-white/65 transition-colors hover:bg-white/10 hover:text-white"><span>Русский</span><span class="text-[9px] tracking-[0.18em] text-white/40">RU</span></a>
-        <a href="../fr/carrieres.html" hreflang="fr" lang="fr" class="flex items-center justify-between gap-3 px-3 py-2 text-[11px] font-medium text-white/65 transition-colors hover:bg-white/10 hover:text-white"><span>Français</span><span class="text-[9px] tracking-[0.18em] text-white/40">FR</span></a>
-        <a href="../ar/careers.html" hreflang="ar" lang="ar" class="flex items-center justify-between gap-3 px-3 py-2 text-[11px] font-medium text-white/65 transition-colors hover:bg-white/10 hover:text-white"><span>العربية</span><span class="text-[9px] tracking-[0.18em] text-white/40">AR</span></a>
-          </div>
-        </details>
-<!-- /i18n:lang -->
-      </div>
-    </div>
-  </div>
-
   <!-- ============ HEADER ============ -->
   <header id="siteHeader" class="sticky top-0 z-50 border-b border-steel-pale bg-white/95 backdrop-blur-md transition-shadow duration-300">
     <div class="container-page flex h-[76px] items-center justify-between gap-6 lg:h-[88px]">
@@ -76,7 +46,6 @@
       </a>
 
       <nav class="hidden items-center gap-4 lg:flex xl:gap-8" aria-label="Main menu">
-        <a href="index.html" class="nav-item">Home</a>
                 <div class="nav-drop">
           <button type="button" id="markalarBtn" class="nav-item nav-drop-trigger" aria-expanded="false" aria-controls="markalarMenu">
             Brands
@@ -143,6 +112,25 @@
         <a href="contact.html" class="nav-item">Contact</a>
       </nav>
 
+      <!-- i18n:lang -->
+        <details class="relative ms-auto shrink-0 lg:ms-4" data-lang-switch>
+          <summary class="flex cursor-pointer list-none items-center gap-1.5 text-charcoal [&::-webkit-details-marker]:hidden">
+            <span class="text-[11px] font-bold tracking-[0.18em]">EN</span>
+            <svg class="h-3 w-3 text-steel" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="square" d="m6 9 6 6 6-6" /></svg>
+            <span class="sr-only">Language selection</span>
+          </summary>
+          <div class="absolute end-0 top-full z-[60] mt-2 w-44 border border-steel-pale bg-white p-1.5 shadow-xl">
+        <a href="../kariyer.html" hreflang="tr" lang="tr" class="flex items-center justify-between gap-3 px-3 py-2 text-[11px] font-medium text-charcoal/80 transition-colors hover:bg-steel-pale hover:text-navy"><span>Türkçe</span><span class="text-[9px] tracking-[0.18em] text-charcoal/35">TR</span></a>
+        <a href="careers.html" hreflang="en" lang="en" aria-current="true" class="flex items-center justify-between gap-3 bg-navy px-3 py-2 text-[11px] font-semibold text-white"><span>English</span><span class="text-[9px] tracking-[0.18em] text-white/50">EN</span></a>
+        <a href="../de/karriere.html" hreflang="de" lang="de" class="flex items-center justify-between gap-3 px-3 py-2 text-[11px] font-medium text-charcoal/80 transition-colors hover:bg-steel-pale hover:text-navy"><span>Deutsch</span><span class="text-[9px] tracking-[0.18em] text-charcoal/35">DE</span></a>
+        <a href="../ru/careers.html" hreflang="ru" lang="ru" class="flex items-center justify-between gap-3 px-3 py-2 text-[11px] font-medium text-charcoal/80 transition-colors hover:bg-steel-pale hover:text-navy"><span>Русский</span><span class="text-[9px] tracking-[0.18em] text-charcoal/35">RU</span></a>
+        <a href="../fr/carrieres.html" hreflang="fr" lang="fr" class="flex items-center justify-between gap-3 px-3 py-2 text-[11px] font-medium text-charcoal/80 transition-colors hover:bg-steel-pale hover:text-navy"><span>Français</span><span class="text-[9px] tracking-[0.18em] text-charcoal/35">FR</span></a>
+        <a href="../ar/careers.html" hreflang="ar" lang="ar" class="flex items-center justify-between gap-3 px-3 py-2 text-[11px] font-medium text-charcoal/80 transition-colors hover:bg-steel-pale hover:text-navy"><span>العربية</span><span class="text-[9px] tracking-[0.18em] text-charcoal/35">AR</span></a>
+          </div>
+        </details>
+<!-- /i18n:lang -->
+
+
       <button id="menuBtn" class="-mr-2 p-2 text-charcoal lg:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
         <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="square" d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17" />
@@ -152,7 +140,6 @@
 
     <div id="mobileMenu" class="hidden border-t border-steel-pale bg-white lg:hidden">
       <nav class="container-page flex flex-col py-3" aria-label="Mobile menu">
-        <a href="index.html" class="nav-item-mobile">Home</a>
                 <div class="border-b border-steel-pale py-1">
           <a href="brands.html" class="nav-item-mobile border-0">Brands</a>
           <div class="grid grid-cols-2 gap-3 pb-4">

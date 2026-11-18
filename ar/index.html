@@ -35,36 +35,6 @@
 
 <body class="bg-white text-charcoal font-body">
 
-  <!-- ============ ÜST BİLGİ ÇUBUĞU ============ -->
-  <div class="bg-navy-deep text-white/70 text-[11px] tracking-[0.14em] uppercase">
-    <div class="container-page flex h-9 items-center justify-between">
-      <span class="hidden sm:inline">BOZKURT-BF</span>
-      <div class="flex items-center gap-5">
-        <a href="tel:+902328685600" class="hover:text-white transition-colors">+90 232 868 56 00</a>
-        <span class="hidden md:inline text-white/25">|</span>
-        <a href="mailto:info@bozkurt-bf.com" class="hidden md:inline hover:text-white transition-colors">info@bozkurt-bf.com</a>
-        <span class="text-white/25">|</span>
-        <!-- i18n:lang -->
-        <details class="relative shrink-0" data-lang-switch>
-          <summary class="flex cursor-pointer list-none items-center gap-1.5 text-white [&::-webkit-details-marker]:hidden">
-            <span>AR</span>
-            <svg class="h-3 w-3 text-white/50" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="square" d="m6 9 6 6 6-6" /></svg>
-            <span class="sr-only">اختيار اللغة</span>
-          </summary>
-          <div class="absolute end-0 top-full z-[60] mt-2 w-44 border border-white/10 bg-navy-deep/95 p-1.5 shadow-xl backdrop-blur">
-        <a href="../index.html" hreflang="tr" lang="tr" class="flex items-center justify-between gap-3 px-3 py-2 text-[11px] font-medium text-white/65 transition-colors hover:bg-white/10 hover:text-white"><span>Türkçe</span><span class="text-[9px] tracking-[0.18em] text-white/40">TR</span></a>
-        <a href="../en/index.html" hreflang="en" lang="en" class="flex items-center justify-between gap-3 px-3 py-2 text-[11px] font-medium text-white/65 transition-colors hover:bg-white/10 hover:text-white"><span>English</span><span class="text-[9px] tracking-[0.18em] text-white/40">EN</span></a>
-        <a href="../de/index.html" hreflang="de" lang="de" class="flex items-center justify-between gap-3 px-3 py-2 text-[11px] font-medium text-white/65 transition-colors hover:bg-white/10 hover:text-white"><span>Deutsch</span><span class="text-[9px] tracking-[0.18em] text-white/40">DE</span></a>
-        <a href="../ru/index.html" hreflang="ru" lang="ru" class="flex items-center justify-between gap-3 px-3 py-2 text-[11px] font-medium text-white/65 transition-colors hover:bg-white/10 hover:text-white"><span>Русский</span><span class="text-[9px] tracking-[0.18em] text-white/40">RU</span></a>
-        <a href="../fr/index.html" hreflang="fr" lang="fr" class="flex items-center justify-between gap-3 px-3 py-2 text-[11px] font-medium text-white/65 transition-colors hover:bg-white/10 hover:text-white"><span>Français</span><span class="text-[9px] tracking-[0.18em] text-white/40">FR</span></a>
-        <a href="index.html" hreflang="ar" lang="ar" aria-current="true" class="flex items-center justify-between gap-3 bg-white/10 px-3 py-2 text-[11px] font-semibold text-white"><span>العربية</span><span class="text-[9px] tracking-[0.18em] text-white/40">AR</span></a>
-          </div>
-        </details>
-<!-- /i18n:lang -->
-      </div>
-    </div>
-  </div>
-
   <!-- ============ HEADER ============ -->
   <header id="siteHeader" class="sticky top-0 z-50 border-b border-steel-pale bg-white/95 backdrop-blur-md transition-shadow duration-300">
     <div class="container-page flex h-[76px] items-center justify-between gap-6 lg:h-[88px]">
@@ -75,8 +45,7 @@
         <span class="logo-rule" aria-hidden="true"></span>
       </a>
 
-      <nav class="hidden lg:flex items-center gap-4 xl:gap-8" aria-label="القائمة الرئيسية">
-        <a href="index.html" class="nav-item is-current" aria-current="page">الرئيسية</a>
+      <nav class="ms-auto hidden lg:flex items-center gap-4 xl:gap-8" aria-label="القائمة الرئيسية">
         <div class="nav-drop">
           <button type="button" id="markalarBtn" class="nav-item nav-drop-trigger" aria-expanded="false" aria-controls="markalarMenu">
             علاماتنا
@@ -143,6 +112,25 @@
         <a href="contact.html" class="nav-item">اتصل بنا</a>
       </nav>
 
+      <!-- i18n:lang -->
+        <details class="relative ms-auto shrink-0 lg:ms-4" data-lang-switch>
+          <summary class="flex cursor-pointer list-none items-center gap-1.5 text-charcoal [&::-webkit-details-marker]:hidden">
+            <span class="text-[11px] font-bold tracking-[0.18em]">AR</span>
+            <svg class="h-3 w-3 text-steel" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="square" d="m6 9 6 6 6-6" /></svg>
+            <span class="sr-only">اختيار اللغة</span>
+          </summary>
+          <div class="absolute end-0 top-full z-[60] mt-2 w-44 border border-steel-pale bg-white p-1.5 shadow-xl">
+        <a href="../index.html" hreflang="tr" lang="tr" class="flex items-center justify-between gap-3 px-3 py-2 text-[11px] font-medium text-charcoal/80 transition-colors hover:bg-steel-pale hover:text-navy"><span>Türkçe</span><span class="text-[9px] tracking-[0.18em] text-charcoal/35">TR</span></a>
+        <a href="../en/index.html" hreflang="en" lang="en" class="flex items-center justify-between gap-3 px-3 py-2 text-[11px] font-medium text-charcoal/80 transition-colors hover:bg-steel-pale hover:text-navy"><span>English</span><span class="text-[9px] tracking-[0.18em] text-charcoal/35">EN</span></a>
+        <a href="../de/index.html" hreflang="de" lang="de" class="flex items-center justify-between gap-3 px-3 py-2 text-[11px] font-medium text-charcoal/80 transition-colors hover:bg-steel-pale hover:text-navy"><span>Deutsch</span><span class="text-[9px] tracking-[0.18em] text-charcoal/35">DE</span></a>
+        <a href="../ru/index.html" hreflang="ru" lang="ru" class="flex items-center justify-between gap-3 px-3 py-2 text-[11px] font-medium text-charcoal/80 transition-colors hover:bg-steel-pale hover:text-navy"><span>Русский</span><span class="text-[9px] tracking-[0.18em] text-charcoal/35">RU</span></a>
+        <a href="../fr/index.html" hreflang="fr" lang="fr" class="flex items-center justify-between gap-3 px-3 py-2 text-[11px] font-medium text-charcoal/80 transition-colors hover:bg-steel-pale hover:text-navy"><span>Français</span><span class="text-[9px] tracking-[0.18em] text-charcoal/35">FR</span></a>
+        <a href="index.html" hreflang="ar" lang="ar" aria-current="true" class="flex items-center justify-between gap-3 bg-navy px-3 py-2 text-[11px] font-semibold text-white"><span>العربية</span><span class="text-[9px] tracking-[0.18em] text-white/50">AR</span></a>
+          </div>
+        </details>
+<!-- /i18n:lang -->
+
+
       <button id="menuBtn" class="lg:hidden -mr-2 p-2 text-charcoal" aria-label="فتح القائمة" aria-expanded="false" aria-controls="mobileMenu">
         <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="square" d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17" />
@@ -152,7 +140,6 @@
 
     <div id="mobileMenu" class="hidden border-t border-steel-pale bg-white lg:hidden">
       <nav class="container-page flex flex-col py-3" aria-label="قائمة الجوال">
-        <a href="index.html" class="nav-item-mobile is-current">الرئيسية</a>
         <div class="border-b border-steel-pale py-1">
           <a href="brands.html" class="nav-item-mobile border-0">علاماتنا</a>
           <div class="grid grid-cols-2 gap-3 pb-4">
@@ -184,71 +171,44 @@
 
   <main>
 
-    <!-- ============ HERO — TAM EKRAN MARKA GEÇİŞİ ============ -->
-    <!-- Tam ekran vitrin: metin yok; ekranı markanın fotoğrafı kaplar.
-         Yeni marka eklemek: aşağıdaki .xfeed-slide bloğunu çoğalt
-         (data-label + data-loc doldur) ve .hero-full-tabs içine bir düğme ekle. -->
-    <section class="hero-full" aria-label="واجهة العلامات">
-      <div class="hero-full-stage" data-xfeed-group>
-        <div class="xfeed xfeed--full" data-xfeed data-hold="6500" data-pause="controls">
+    <!-- ============ HERO — GÖKYÜZÜ / YILDIZ ============ -->
+    <!-- Kurumsal kimlik kılavuzu: yıldız motifi, Bozkurt logosundaki "k"
+         harfinin boşluğundan türetilir; gökyüzü degradesi üzerinde yaşar. -->
+    <section class="brand-hero">
+      <div class="brand-hero-bg" aria-hidden="true"></div>
+      <div class="brand-hero-halo" aria-hidden="true"></div>
+      <div class="star-field brand-hero-stars" aria-hidden="true"></div>
 
-          <div class="xfeed-slide is-active" data-xfeed-slide
-               data-label="Betonstar" data-loc="Torbalı / İzmir">
-            <img src="../assets/img/betonstar-vitrine.jpg"
-                 alt="مضخة خرسانة بذراع من Betonstar في مجمع الإنتاج بطوربالي"
-                 style="--hero-x: 62%; --hero-x-sm: 72%"
-                 fetchpriority="high" />
-            <span class="xfeed-veil xfeed-veil--full" aria-hidden="true"></span>
-            <span class="hero-slide-brand">
-              <img src="../assets/logos/betonstar-white.png" alt="Betonstar" />
-              <span class="hero-slide-spec">مضخات خرسانة بذراع · من 36 إلى 58 م</span>
-              <a href="https://www.betonstar.com/" target="_blank" rel="noopener noreferrer" class="hero-slide-link">
-                betonstar.com
-                <svg fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="square" d="M7 17 17 7m0 0H8m9 0v9" />
-                </svg>
-              </a>
-            </span>
-          </div>
+      <span class="brand-spark" style="--x:14%;--y:26%;--s:5px;--d:0s" aria-hidden="true"></span>
+      <span class="brand-spark" style="--x:82%;--y:18%;--s:4px;--d:1.4s" aria-hidden="true"></span>
+      <span class="brand-spark" style="--x:72%;--y:64%;--s:6px;--d:.7s" aria-hidden="true"></span>
+      <span class="brand-spark" style="--x:22%;--y:72%;--s:4px;--d:2.1s" aria-hidden="true"></span>
+      <span class="brand-spark" style="--x:47%;--y:12%;--s:3px;--d:1.1s" aria-hidden="true"></span>
+      <span class="brand-spark" style="--x:62%;--y:86%;--s:4px;--d:2.6s" aria-hidden="true"></span>
 
-          <div class="xfeed-slide" data-xfeed-slide
-               data-label="Fermec" data-loc="İZBAŞ / İzmir">
-            <img src="../assets/img/fermec-vitrine.jpg"
-                 alt="حفارة-لودر من Fermec في موقع العمل"
-                 style="--hero-x: 52%; --hero-y: 58%; --hero-x-sm: 40%" />
-            <span class="xfeed-veil xfeed-veil--full" aria-hidden="true"></span>
-            <span class="hero-slide-brand">
-              <img src="../assets/logos/fermec-white.png" alt="Fermec" />
-              <span class="hero-slide-spec">حفارة-لودر · المنطقة الحرة İZBAŞ</span>
-              <a href="https://www.fermec.com.tr/" target="_blank" rel="noopener noreferrer" class="hero-slide-link">
-                fermec.com.tr
-                <svg fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="square" d="M7 17 17 7m0 0H8m9 0v9" />
-                </svg>
-              </a>
-            </span>
-          </div>
-
-          <span class="hero-side-label" aria-hidden="true">Ürün Vitrini</span>
-
-          <div class="hero-full-controls" data-xfeed-controls>
-            <span class="hero-full-index">
-              <span data-xfeed-index>01</span> / <span data-xfeed-total>02</span>
-            </span>
-            <div class="hero-full-tabs" role="group" aria-label="اختيار العلامة">
-              <button type="button" class="hero-full-tab" data-xfeed-tab aria-selected="true" aria-label="عرض صورة Betonstar">Betonstar</button>
-              <button type="button" class="hero-full-tab" data-xfeed-tab aria-selected="false" aria-label="عرض صورة Fermec">Fermec</button>
-            </div>
-          </div>
-
-          <a href="#giris" class="hero-scroll">
-            <span class="hero-scroll-track" aria-hidden="true"></span>
-            <span class="hero-scroll-text">استكشف</span>
-          </a>
-
-          <div class="hero-progress" aria-hidden="true"><span data-xfeed-progress></span></div>
+      <div class="brand-hero-inner">
+        <img src="../assets/logos/bozkurt-white.png" alt="BOZKURT" class="brand-hero-logo" />
+        <div class="brand-hero-core" aria-hidden="true">
+          <svg class="brand-hero-star" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="heroStarGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity=".55" />
+                <stop offset="45%" stop-color="#3c9cd7" stop-opacity=".22" />
+                <stop offset="100%" stop-color="#3c9cd7" stop-opacity="0" />
+              </radialGradient>
+            </defs>
+            <circle cx="100" cy="100" r="96" fill="url(#heroStarGlow)" />
+            <circle class="brand-hero-ring" cx="100" cy="100" r="82" fill="none" stroke="#bbc4ca" stroke-opacity=".22" stroke-dasharray="2 9" />
+            <path class="brand-hero-star-shape" d="M100 8C104.5 66 134 95.5 192 100C134 104.5 104.5 134 100 192C95.5 134 66 104.5 8 100C66 95.5 95.5 66 100 8Z" fill="#ffffff" />
+          </svg>
         </div>
+        <p class="brand-hero-tagline">Be Smart · Be Strong · <span class="text-white">Powered by BOZKURT</span></p>
       </div>
+
+      <a href="#giris" class="hero-scroll brand-hero-scroll">
+        <span class="hero-scroll-track" aria-hidden="true"></span>
+        <span class="hero-scroll-text">استكشف</span>
+      </a>
     </section>
 
     <!-- ============ GİRİŞ MANİFESTOSU ============ -->
