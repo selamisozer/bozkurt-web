@@ -203,18 +203,25 @@
           </div>
         </div>
 
-        <svg class="cine-star" id="cineStar" viewBox="0 0 200 200">
-          <defs>
-            <radialGradient id="cineStarGlow" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="#ffffff" stop-opacity=".6" />
-              <stop offset="45%" stop-color="#3c9cd7" stop-opacity=".22" />
-              <stop offset="100%" stop-color="#3c9cd7" stop-opacity="0" />
-            </radialGradient>
-          </defs>
-          <circle cx="100" cy="100" r="96" fill="url(#cineStarGlow)" />
-          <circle class="cine-star-ring" cx="100" cy="100" r="84" fill="none" stroke="#bbc4ca" stroke-opacity=".22" stroke-dasharray="2 9" />
-          <path class="cine-star-shape" d="M100 10 L190 100 L100 190 L10 100 Z" fill="#ffffff" />
-        </svg>
+        <span class="cine-star" id="cineStar">
+          <svg class="cine-star-svg" viewBox="0 0 200 200" aria-hidden="true">
+            <defs>
+              <radialGradient id="cineStarGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity=".6" />
+                <stop offset="45%" stop-color="#3c9cd7" stop-opacity=".22" />
+                <stop offset="100%" stop-color="#3c9cd7" stop-opacity="0" />
+              </radialGradient>
+            </defs>
+            <circle cx="100" cy="100" r="96" fill="url(#cineStarGlow)" />
+            <circle class="cine-star-ring" cx="100" cy="100" r="84" fill="none" stroke="#bbc4ca" stroke-opacity=".22" stroke-dasharray="2 9" />
+            <path class="cine-star-shape" d="M100 10 L190 100 L100 190 L10 100 Z" fill="#ffffff" />
+          </svg>
+          <span class="cine-star-shine" aria-hidden="true"></span>
+          <span class="cine-star-glint cine-star-glint--a" aria-hidden="true"></span>
+          <span class="cine-star-glint cine-star-glint--b" aria-hidden="true"></span>
+          <span class="cine-star-glint cine-star-glint--c" aria-hidden="true"></span>
+          <span class="cine-star-glint cine-star-glint--d" aria-hidden="true"></span>
+        </span>
 
         <div class="cine-particles" id="cineParticles"></div>
       </div>
