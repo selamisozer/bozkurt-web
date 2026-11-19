@@ -477,7 +477,9 @@
         <!-- Sağ: form -->
         <div class="lg:col-span-8">
           <form id="applyForm" class="form-card bg-white text-charcoal" novalidate
-                data-endpoint="" data-mail="kariyer@bozkurt-bf.com">
+                data-endpoint="form.php" data-mail="kariyer@bozkurt-bf.com">
+            <input type="hidden" name="form_type" value="career" />
+            <input type="hidden" name="lang" value="tr" />
 
             <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 border-b border-steel-pale pb-5">
               <h3 class="font-display text-[17px] font-bold tracking-[-0.01em] text-charcoal">Başvuru bilgileri</h3>
@@ -770,7 +772,7 @@
                   <span class="form-file-icon"><svg fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="square" d="M12 16V4m0 0L8 8m4-4 4 4M4 15v3.5A1.5 1.5 0 0 0 5.5 20h13a1.5 1.5 0 0 0 1.5-1.5V15" /></svg></span>
                   <span class="form-file-text">
                     <span id="apCvName" class="form-file-name is-empty">Dosya seçilmedi</span>
-                    <span class="form-file-note">PDF veya Word · en fazla 5 MB</span>
+                    <span class="form-file-note">PDF veya Word · en fazla 3 MB</span>
                   </span>
                   <input id="apCv" name="cv" type="file" accept=".pdf,.doc,.docx,application/pdf" required
                          aria-labelledby="apCvLabel" aria-describedby="apCvErr" />
@@ -1023,7 +1025,7 @@
       const submitBtn = $('#apSubmit');
       const submitLabel = $('#apSubmitLabel');
 
-      const MAX_CV_BYTES = 5 * 1024 * 1024;
+      const MAX_CV_BYTES = 3 * 1024 * 1024;
       const CV_EXT = ['.pdf', '.doc', '.docx'];
 
       /* --- Hata gösterimi --- */
@@ -1073,7 +1075,7 @@
           return false;
         }
         if (file.size > MAX_CV_BYTES) {
-          setError(cvInput, 'apCvErr', 'Dosya 5 MB sınırını aşıyor (' + (file.size / 1024 / 1024).toFixed(1) + ' MB).');
+          setError(cvInput, 'apCvErr', 'Dosya 3 MB sınırını aşıyor (' + (file.size / 1024 / 1024).toFixed(1) + ' MB).');
           return false;
         }
         setError(cvInput, 'apCvErr', '');
