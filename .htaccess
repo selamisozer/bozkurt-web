@@ -12,6 +12,9 @@ AddDefaultCharset UTF-8
   # www -> kök alan adı
   RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
   RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+  # Şimdilik kapalı diller -> İngilizce
+  RewriteRule ^(de|ru|fr|ar)/?$ /en/ [R=301,L]
+  RewriteRule ^(de|ru|fr|ar)/(.*)$ /en/$2 [R=301,L]
 </IfModule>
 
 ErrorDocument 404 /404.html
