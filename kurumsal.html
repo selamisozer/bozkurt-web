@@ -157,7 +157,7 @@
   <main>
 
     <!-- ============ SAYFA BAŞLIĞI ============ -->
-    <section class="relative isolate overflow-hidden sky-gradient">
+    <section class="relative isolate overflow-hidden sky-gradient page-hero">
       <div class="pointer-events-none absolute inset-0 star-field opacity-[0.18]" aria-hidden="true"></div>
       <div class="container-page relative py-14 lg:py-20">
         <nav aria-label="Sayfa yolu" class="flex items-center gap-2.5 text-[10px] uppercase tracking-[0.18em] text-white/40">
@@ -235,10 +235,10 @@
         </section>-->
 
     <!-- ============ KİLOMETRE TAŞLARI ============ -->
-    <section id="tarihce" class="relative isolate scroll-mt-24 overflow-hidden sky-gradient py-16 text-white lg:py-24">
-      <div class="pointer-events-none absolute inset-0 star-field opacity-[0.18]" aria-hidden="true"></div>
-      <div class="absolute end-0 top-1/3 h-[18rem] w-[18rem] rounded-full bg-navy-light/12 blur-3xl sm:h-[26rem] sm:w-[26rem]"></div>
-      <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+    <section id="tarihce" class="relative isolate scroll-mt-24 overflow-hidden bg-[#f2f5f9] py-16 lg:py-24">
+      <div class="pointer-events-none absolute inset-0 office-light" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#f2f5f9]/20 via-[#f2f5f9]/80 to-[#f2f5f9]" aria-hidden="true"></div>
+      <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-navy/15 to-transparent"></div>
 
       <div class="container-page relative grid gap-12 lg:grid-cols-12 lg:gap-16">
 
@@ -246,36 +246,36 @@
         <div class="lg:col-span-4">
           <div class="lg:sticky lg:top-32">
             <div class="flex items-center gap-4">
-              <span class="h-[2px] w-10 bg-steel-light"></span>
-              <span class="label-eyebrow text-steel-light">Kilometre Taşları</span>
+              <span class="h-[2px] w-10 bg-sky"></span>
+              <span class="label-eyebrow text-navy">Kilometre Taşları</span>
             </div>
 
             <h2 class="mt-5 font-display text-[30px] font-bold leading-[1.12] tracking-[-0.02em] sm:text-[36px]">
               Bugüne gelen yol,<br />ileriye giden plan.
             </h2>
 
-            <p class="mt-5 max-w-xs text-[13px] leading-[1.8] text-white/50">
+            <p class="mt-5 max-w-xs text-[13px] leading-[1.8] text-charcoal/70">
               Grup yapısının oluşumundan bugüne uzanan adımlar; ardından
               önümüzdeki dönem için çizdiğimiz yol haritası.
             </p>
 
-            <div class="mt-8 flex flex-col gap-3 border-t border-white/10 pt-6 text-[10px] uppercase tracking-[0.16em]">
-              <span class="flex items-center gap-3 text-white/45">
-                <span class="h-2 w-2 rounded-full bg-steel-light"></span>Tamamlanan adımlar
+            <div class="mt-8 flex flex-col gap-3 border-t border-steel-pale pt-6 text-[10px] uppercase tracking-[0.16em]">
+              <span class="flex items-center gap-3 text-steel">
+                <span class="h-2 w-2 rounded-full bg-navy"></span>Tamamlanan adımlar
               </span>
-              <span class="flex items-center gap-3 text-white/45">
+              <span class="flex items-center gap-3 text-steel">
                 <span class="h-2 w-2 rounded-full border border-dashed border-sky/70"></span>Yol haritası
               </span>
             </div>
 
-            <div class="mt-8 hidden gap-8 border-t border-white/10 pt-6 sm:flex lg:flex-col lg:gap-5">
+            <div class="mt-8 hidden gap-8 border-t border-steel-pale pt-6 sm:flex lg:flex-col lg:gap-5">
               <div>
-                <div class="font-display text-2xl font-bold text-white">5</div>
-                <div class="mt-1 text-[9.5px] uppercase tracking-[0.16em] text-white/35">Kilometre taşı</div>
+                <div class="font-display text-2xl font-bold text-charcoal">5</div>
+                <div class="mt-1 text-[9.5px] uppercase tracking-[0.16em] text-steel">Kilometre taşı</div>
               </div>
               <div>
-                <div class="font-display text-2xl font-bold text-white">2</div>
-                <div class="mt-1 text-[9.5px] uppercase tracking-[0.16em] text-white/35">Marka</div>
+                <div class="font-display text-2xl font-bold text-charcoal">2</div>
+                <div class="mt-1 text-[9.5px] uppercase tracking-[0.16em] text-steel">Marka</div>
               </div>
             </div>
           </div>
@@ -283,7 +283,7 @@
 
         <!-- Sağ: zaman çizelgesi -->
         <div class="lg:col-span-8">
-          <ol class="timeline" data-timeline>
+          <ol class="timeline timeline--light" data-timeline>
             <li class="milestone">
               <span class="milestone-marker" aria-hidden="true"></span>
               <div class="milestone-body">
@@ -291,10 +291,10 @@
                   <span class="milestone-index">01</span>
                   <span class="milestone-tag">Kuruluş</span>
                 </div>
-                <h3 class="mt-2.5 font-display text-[17px] font-bold leading-snug text-white">
+                <h3 class="mt-2.5 font-display text-[17px] font-bold leading-snug text-charcoal">
                   BOZKURT-BF'nin kuruluşu
                 </h3>
-                <p class="mt-2 text-[13px] leading-[1.75] text-white/55">
+                <p class="mt-2 text-[13px] leading-[1.75] text-charcoal/70">
                   Sanayi üretimine odaklanan yatırım vizyonunun temeli atıldı.
                   Grup; katma değerli üretim yapan, mühendislik birikimi güçlü
                   markaları bünyesine katma stratejisini belirledi.
@@ -310,10 +310,10 @@
                   <span class="milestone-tag">Katılım</span>
                   <span class="milestone-year">2025</span>
                 </div>
-                <h3 class="mt-2.5 font-display text-[17px] font-bold leading-snug text-white">
+                <h3 class="mt-2.5 font-display text-[17px] font-bold leading-snug text-charcoal">
                   Betonstar gruba katıldı
                 </h3>
-                <p class="mt-2 text-[13px] leading-[1.75] text-white/55">
+                <p class="mt-2 text-[13px] leading-[1.75] text-charcoal/70">
                   2008'den bu yana İzmir Torbalı'da beton pompası üreten Betonstar,
                   BOZKURT-BF bünyesine geçti. Marka; ürün geliştirme,
                   kurumsal kimlik ve satış organizasyonunda kapsamlı bir
@@ -329,10 +329,10 @@
                   <span class="milestone-index">03</span>
                   <span class="milestone-tag">Genişleme</span>
                 </div>
-                <h3 class="mt-2.5 font-display text-[17px] font-bold leading-snug text-white">
+                <h3 class="mt-2.5 font-display text-[17px] font-bold leading-snug text-charcoal">
                   Fermec ile iş makineleri alanı
                 </h3>
-                <p class="mt-2 text-[13px] leading-[1.75] text-white/55">
+                <p class="mt-2 text-[13px] leading-[1.75] text-charcoal/70">
                   Kazıcı-yükleyici segmentindeki Fermec markası gruba katıldı.
                   Böylece ürün gamı beton teknolojilerinden iş makinelerine
                   genişledi; iki marka ortak üretim ve servis altyapısını
@@ -348,10 +348,10 @@
                   <span class="milestone-index">04</span>
                   <span class="milestone-tag">Bugün</span>
                 </div>
-                <h3 class="mt-2.5 font-display text-[17px] font-bold leading-snug text-white">
+                <h3 class="mt-2.5 font-display text-[17px] font-bold leading-snug text-charcoal">
                   İki marka, ortak üretim gücü
                 </h3>
-                <p class="mt-2 text-[13px] leading-[1.75] text-white/55">
+                <p class="mt-2 text-[13px] leading-[1.75] text-charcoal/70">
                   Betonstar ve Fermec; 70.000 m² entegre üretim kampüsü, ortak
                   kalite standardı ve 50'den fazla ülkeye uzanan satış ağıyla
                   faaliyet gösteriyor.
@@ -366,10 +366,10 @@
                   <span class="milestone-index">05</span>
                   <span class="milestone-tag">İleride</span>
                 </div>
-                <h3 class="mt-2.5 font-display text-[17px] font-bold leading-snug text-white">
+                <h3 class="mt-2.5 font-display text-[17px] font-bold leading-snug text-charcoal">
                   Yeni pazarlar, daha geniş ürün gamı
                 </h3>
-                <p class="mt-2 text-[13px] leading-[1.75] text-white/55">
+                <p class="mt-2 text-[13px] leading-[1.75] text-charcoal/70">
                   Üretim kapasitesinin artırılması, ihracat ağının genişletilmesi
                   ve yeni ürün ailelerinin geliştirilmesi öncelikli başlıklarımız
                   arasında.
