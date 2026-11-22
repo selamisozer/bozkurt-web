@@ -31,13 +31,12 @@
 <style>
 .cine-word-wrap{top:16%!important}
 .cine-word{opacity:1!important;transform:none!important;width:min(56vw,560px)!important}
-.cine-word-full{opacity:1!important}
-.cine-k{display:none!important}
 .cine-star{opacity:1!important;top:37%!important;transform:translate(-50%,-50%) scale(1)!important}
+.cine-fleet{opacity:1!important;transform:none!important}
 .cine-fleet-media{clip-path:inset(0 0 0 0)!important}
 .cine-bg{opacity:1!important}
 .cine-grid{opacity:.16!important;transform:none!important}
-.cine-brands{opacity:1!important}
+.cine-brands{opacity:1!important;transform:none!important;pointer-events:auto!important}
 .cine-skip{display:none!important}
 @media (max-width:1023px){.cine-word{width:min(80vw,300px)!important}.cine-star{width:140px!important}}
 </style>
@@ -54,7 +53,6 @@
       <a href="index.html" class="logo-mark shrink-0" aria-label="BOZKURT ana sayfa">
         <img src="assets/logos/bozkurt.png" alt="BOZKURT" class="logo-mark-img h-7 w-auto lg:h-8" />
         <span class="logo-shine" aria-hidden="true"></span>
-        <span class="logo-rule" aria-hidden="true"></span>
       </a>
 
       <nav class="ms-auto hidden lg:flex items-center gap-4 xl:gap-8" aria-label="Ana menü">
@@ -181,10 +179,7 @@
       <div class="cine-intro" id="cineIntro" aria-hidden="true">
         <div class="cine-word-wrap" id="cineWordWrap">
           <div class="cine-word" id="cineWord">
-            <img src="assets/logos/bozkurt-nok.png" alt="" class="cine-word-img" />
-            <img src="assets/logos/bozkurt-white.png" alt="" class="cine-word-full" />
-            <img src="assets/img/intro-k.png" alt="" class="cine-k" id="cineK" data-k="1" />
-            <img src="assets/img/intro-k.png" alt="" class="cine-k cine-k--clone" id="cineK2" data-k="2" />
+            <img src="assets/logos/bozkurt-white.png" alt="" class="cine-word-img" />
           </div>
         </div>
 
@@ -225,11 +220,15 @@
 
         <div class="cine-brands" id="cineBrands">
           <div class="cine-brand">
-            <span class="cine-brand-name">Betonstar</span>
+            <a class="cine-brand-logo-link" href="https://www.betonstar.com/" target="_blank" rel="noopener noreferrer" aria-label="Betonstar">
+              <img src="assets/logos/betonstar-hero.png" alt="Betonstar" class="cine-brand-logo" />
+            </a>
             <a href="https://www.betonstar.com/" target="_blank" rel="noopener noreferrer" class="cine-brand-link">betonstar.com</a>
           </div>
           <div class="cine-brand cine-brand--end">
-            <span class="cine-brand-name">Fermec</span>
+            <a class="cine-brand-logo-link" href="https://fermec.com/" target="_blank" rel="noopener noreferrer" aria-label="Fermec">
+              <img src="assets/logos/fermec-hero.png" alt="Fermec" class="cine-brand-logo" />
+            </a>
             <a href="https://fermec.com/" target="_blank" rel="noopener noreferrer" class="cine-brand-link">fermec.com</a>
           </div>
         </div>
@@ -757,8 +756,6 @@
       if (!cine) return;
       const wordWrap = document.getElementById('cineWordWrap');
       const word = document.getElementById('cineWord');
-      const k1 = document.getElementById('cineK');
-      const k2 = document.getElementById('cineK2');
       const star = document.getElementById('cineStar');
       const particles = document.getElementById('cineParticles');
       const skip = document.getElementById('cineSkip');
@@ -783,7 +780,7 @@
         setWordScale();
         cine.classList.add('is-final', 'is-draw', 'is-brands', 'is-done', 'is-instant');
         wordWrap.classList.add('is-top');
-        word.classList.add('is-in', 'is-fill', 'is-kgone');
+        word.classList.add('is-in');
         star.classList.add('is-on', 'is-star');
         particles.style.display = 'none';
       }
@@ -806,39 +803,24 @@
         particles.appendChild(frag);
       }
 
-      function measure() {
-        const cr = cine.getBoundingClientRect();
-        const mobile = cr.width < 1024;
-        if (mobile) cine.style.setProperty('--k-scale', '1.12');
-        const kr = k1.getBoundingClientRect();
-        const sx = kr.left + kr.width / 2;
-        const sy = kr.top + kr.height / 2;
-        const x1 = mobile ? 0.37 : 0.43;
-        const x2 = mobile ? 0.63 : 0.57;
-        k1.style.setProperty('--k1x', (cr.left + cr.width * x1 - sx) + 'px');
-        k1.style.setProperty('--k1y', (cr.top + cr.height * (mobile ? 0.30 : 0.27) - sy) + 'px');
-        k2.style.setProperty('--k2x', (cr.left + cr.width * x2 - sx) + 'px');
-        k2.style.setProperty('--k2y', (cr.top + cr.height * (mobile ? 0.30 : 0.27) - sy) + 'px');
-      }
-
       function start() {
         if (done) return;
         if (reduce) { finalize(); return; }
         buildParticles();
         requestAnimationFrame(() => {
-          measure();
           after(80, () => word.classList.add('is-in'));
-          after(900, () => { k1.classList.add('is-fly'); k2.classList.add('is-fly'); });
-          after(1900, () => star.classList.add('is-on'));
-          after(2050, () => particles.classList.add('is-burst'));
-          after(2400, () => word.classList.add('is-kgone'));
-          after(2500, () => { setWordScale(); wordWrap.classList.add('is-top'); word.classList.add('is-fill'); });
-          after(3200, () => star.classList.add('is-star'));
-          after(2800, () => cine.classList.add('is-final'));
-          after(3000, () => cine.classList.add('is-draw'));
-          after(5250, () => cine.classList.add('is-brands'));
-          after(5400, () => cine.classList.add('is-done'));
-          after(9000, finalize);
+          after(650, () => star.classList.add('is-on'));
+          after(750, () => particles.classList.add('is-burst'));
+          after(1500, () => {
+            setWordScale();
+            wordWrap.classList.add('is-top');
+            cine.classList.add('is-final');
+          });
+          after(1800, () => star.classList.add('is-star'));
+          after(2400, () => cine.classList.add('is-draw'));
+          after(4600, () => cine.classList.add('is-brands'));
+          after(4800, () => cine.classList.add('is-done'));
+          after(6500, finalize);
         });
       }
 
