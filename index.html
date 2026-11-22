@@ -461,11 +461,18 @@
 
     /* Açılır menü açıkken hero'daki Bozkurt yazısını aşağı kaydır */
     const cineHero = document.getElementById('cine');
+    const cineWordWrap = document.getElementById('cineWordWrap');
+    let menuShiftTimer;
     const syncCineMenu = () => {
       if (!cineHero) return;
       const anyMenuOpen = [...document.querySelectorAll('.nav-drop')].some(
         (d) => d.hasAttribute('data-open') || (d.matches && d.matches(':hover')) || d.contains(document.activeElement)
       );
+      if (cineWordWrap) {
+        cineWordWrap.style.setProperty('transition', 'transform .6s cubic-bezier(.16, 1, .3, 1)', 'important');
+        clearTimeout(menuShiftTimer);
+        menuShiftTimer = setTimeout(() => cineWordWrap.style.removeProperty('transition'), 700);
+      }
       cineHero.classList.toggle('is-menu-open', anyMenuOpen);
     };
 
