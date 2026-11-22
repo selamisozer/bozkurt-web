@@ -183,26 +183,6 @@
           </div>
         </div>
 
-        <span class="cine-star" id="cineStar">
-          <svg class="cine-star-svg" viewBox="0 0 200 200" aria-hidden="true">
-            <defs>
-              <radialGradient id="cineStarGlow" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stop-color="#ffffff" stop-opacity=".6" />
-                <stop offset="45%" stop-color="#3c9cd7" stop-opacity=".22" />
-                <stop offset="100%" stop-color="#3c9cd7" stop-opacity="0" />
-              </radialGradient>
-            </defs>
-            <circle cx="100" cy="100" r="96" fill="url(#cineStarGlow)" />
-            <circle class="cine-star-ring" cx="100" cy="100" r="84" fill="none" stroke="#bbc4ca" stroke-opacity=".22" stroke-dasharray="2 9" />
-            <path class="cine-star-shape" d="M100 10 L190 100 L100 190 L10 100 Z" fill="#ffffff" />
-          </svg>
-          <span class="cine-star-shine" aria-hidden="true"></span>
-          <span class="cine-star-glint cine-star-glint--a" aria-hidden="true"></span>
-          <span class="cine-star-glint cine-star-glint--b" aria-hidden="true"></span>
-          <span class="cine-star-glint cine-star-glint--c" aria-hidden="true"></span>
-          <span class="cine-star-glint cine-star-glint--d" aria-hidden="true"></span>
-        </span>
-
         <div class="cine-particles" id="cineParticles"></div>
       </div>
 
@@ -221,7 +201,8 @@
         <div class="cine-brands" id="cineBrands">
           <div class="cine-brand">
             <a class="cine-brand-logo-link" href="https://www.betonstar.com/" target="_blank" rel="noopener noreferrer" aria-label="Betonstar">
-              <img src="../assets/logos/betonstar-hero.png" alt="Betonstar" class="cine-brand-logo" />
+              <img src="../assets/logos/betonstar-hero-tr.png" alt="Betonstar" class="cine-brand-logo brand-logo-tr" />
+              <img src="../assets/logos/betonstar-hero-en.png" alt="Betonstar" class="cine-brand-logo brand-logo-en" />
             </a>
             <a href="https://www.betonstar.com/" target="_blank" rel="noopener noreferrer" class="cine-brand-link">betonstar.com</a>
           </div>
@@ -744,7 +725,6 @@
       if (!cine) return;
       const wordWrap = document.getElementById('cineWordWrap');
       const word = document.getElementById('cineWord');
-      const star = document.getElementById('cineStar');
       const particles = document.getElementById('cineParticles');
       const skip = document.getElementById('cineSkip');
       const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -769,7 +749,6 @@
         cine.classList.add('is-final', 'is-draw', 'is-brands', 'is-done', 'is-instant');
         wordWrap.classList.add('is-top');
         word.classList.add('is-in');
-        star.classList.add('is-on', 'is-star');
         particles.style.display = 'none';
       }
 
@@ -797,14 +776,12 @@
         buildParticles();
         requestAnimationFrame(() => {
           after(80, () => word.classList.add('is-in'));
-          after(650, () => star.classList.add('is-on'));
           after(750, () => particles.classList.add('is-burst'));
           after(1500, () => {
             setWordScale();
             wordWrap.classList.add('is-top');
             cine.classList.add('is-final');
           });
-          after(1800, () => star.classList.add('is-star'));
           after(2400, () => cine.classList.add('is-draw'));
           after(4600, () => cine.classList.add('is-brands'));
           after(4800, () => cine.classList.add('is-done'));
