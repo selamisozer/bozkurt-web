@@ -7,7 +7,7 @@
   <meta name="description" content="BOZKURT-BF; Betonstar beton pompaları ve Fermec iş makineleri markalarıyla ağır sanayide mühendislik ve üretim gücü." />
   <link rel="icon" href="assets/favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="assets/favicon.png" />
-  <link rel="stylesheet" href="assets/css/site.css?v=20261125" />
+  <link rel="stylesheet" href="assets/css/site.css?v=20261126" />
   <!-- i18n:head -->
   <link rel="canonical" href="https://bozkurt-bf.com/" />
   <meta name="theme-color" content="#214080" />
@@ -459,6 +459,16 @@
       });
     });
 
+    /* Açılır menü açıkken hero'daki Bozkurt yazısını aşağı kaydır */
+    const cineHero = document.getElementById('cine');
+    const syncCineMenu = () => {
+      if (!cineHero) return;
+      const anyMenuOpen = [...document.querySelectorAll('.nav-drop')].some(
+        (d) => d.hasAttribute('data-open') || (d.matches && d.matches(':hover')) || d.contains(document.activeElement)
+      );
+      cineHero.classList.toggle('is-menu-open', anyMenuOpen);
+    };
+
     /* Açılır menüler (Markalarımız + Kurumsal) */
     document.querySelectorAll('.nav-drop').forEach((drop) => {
       const dropBtn = drop.querySelector('.nav-drop-trigger');
@@ -468,6 +478,7 @@
         if (open) drop.setAttribute('data-open', '');
         else drop.removeAttribute('data-open');
         dropBtn.setAttribute('aria-expanded', String(open));
+        syncCineMenu();
       };
 
       dropBtn.addEventListener('click', () => {
@@ -496,6 +507,11 @@
       drop.querySelectorAll('a').forEach((link) => {
         link.addEventListener('click', () => setDrop(false));
       });
+
+      drop.addEventListener('mouseenter', syncCineMenu);
+      drop.addEventListener('mouseleave', syncCineMenu);
+      drop.addEventListener('focusin', syncCineMenu);
+      drop.addEventListener('focusout', () => setTimeout(syncCineMenu, 0));
     });
 
     const header = document.getElementById('siteHeader');
